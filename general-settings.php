@@ -7,9 +7,9 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <title>RC-POS - General Settings</title>
-    <link href="css/bootstrap.css" rel="stylesheet">
-    <link href="css/font-awesome.css" rel="stylesheet" type="text/css">
-    <link href="css/styles.css" rel="stylesheet">
+    <link href="app-include/css/bootstrap.css" rel="stylesheet">
+    <link href="app-include/css/font-awesome.css" rel="stylesheet" type="text/css">
+    <link href="app-include/css/styles.css" rel="stylesheet">
   </head>
   <body id="page-top">
     <nav class="navbar navbar-expand navbar-dark bg-dark static-top">
@@ -563,9 +563,9 @@
           </div>
         </div>
       </div>
-      <script src="js/jquery.min.js"></script>
-      <script src="js/bootstrap.bundle.min.js"></script>
-      <script src="js/jquery.easing.min.js"></script>
-      <script src="js/rc-pos.min.js"></script>
+      <script src="app-include/js/jquery.min.js"></script>
+      <script src="app-include/js/bootstrap.bundle.min.js"></script>
+      <script src="app-include/js/jquery.easing.min.js"></script>
+      <script src="app-include/js/rc-pos.min.js"></script>
     </body>
   </html>
