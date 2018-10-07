@@ -1,3 +1,4 @@
+<?php  ?>
 <!-- Last 6 Months Profit Area CHart-->
 <div class="card mb-3">
   <div class="card-header bg-primary text-white">
