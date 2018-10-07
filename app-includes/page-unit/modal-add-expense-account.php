@@ -12,26 +12,44 @@
               <span aria-hidden="true">×</span>
             </button>
           </div>
-          <form class="">
+          <form class="" action="" method="post">
             <div class="modal-body">
               <div class="form-group">
-                <label for="">Account Title</label>
-                <input type="text" class="form-control" name="" value="" placeholder="Enter account title here..." required>
+                <label for="account_title">Account Title</label>
+                <input type="text" class="form-control" id="account_title" name="account_title" placeholder="Enter account title here..." required>
                 <small class="text-muted">Example: Akhtar Hotel, Mian Tea Stall or My Personal Account etc</small>
               </div>
               <div class="form-group">
-                <label for="">How much are you depositing?</label>
-                <input type="email" class="form-control" name="" value="" placeholder="Enter the amount you are despositing...">
-              </div>
-              <div class="form-group">
-                <label for="">Description <small class="text-muted">(Optional)</small></label>
-                <textarea name="name" class="form-control" cols="80" placeholder="Add some note or description about this vendor..."></textarea>
+                <label for="account_desc">Description <small class="text-muted">(Optional)</small></label>
+                <textarea name="account_desc" class="form-control" id="account_desc" cols="80" placeholder="Add some note or description about this vendor..."></textarea>
               </div>
               <small class="text-muted"><em>Please double check information before submitting.</em></small>
             </div>
             <div class="modal-footer">
               <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-              <input type="submit" class="btn btn-primary" value="Add Account">
+              <input type="submit" name="addExpenseAccount" class="btn btn-primary" value="Add Account">
+              <?php
+                if (isset($_POST['addExpenseAccount'])) {
+                  $accountTitle = mysqli_real_escape_string($appconnect, $_POST['account_title']);
+                  $accountDesc = mysqli_real_escape_string($appconnect, $_POST['account_desc']);
+
+                  mysqli_query($appconnect, "INSERT INTO `expense_accounts` (
+                                                          `id`,
+                                                          `account_title`,
+                                                          `description`,
+                                                          `visibility`,
+                                                          `date_created`,
+                                                          `last_updated`
+                                                        ) VALUES (
+                                                          NULL,
+                                                          '$accountTitle',
+                                                          '$accountDesc',
+                                                          '1',
+                                                          current_timestamp(),
+                                                          NULL)"
+                                                        );
+                }
+              ?>
             </div>
           </form>
         </div>

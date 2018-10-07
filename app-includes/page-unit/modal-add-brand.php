@@ -12,22 +12,44 @@
               <span aria-hidden="true">×</span>
             </button>
           </div>
-          <form class="">
+          <form class="" action="" method="post">
             <div class="modal-body">
               <div class="form-group">
-                <label for="">Product Brand</label>
-                <input type="text" class="form-control" name="" value="" placeholder="Enter brand name here..." required>
+                <label for="brand_name">Product Brand</label>
+                <input type="text" class="form-control" name="brand_name" id="brand_name" placeholder="Enter brand name here..." required>
                 <small class="text-muted">Example: Nokia, AMB or MSI etc</small>
               </div>
               <div class="form-group">
-                <label for="">Description <small class="text-muted">(Optional)</small></label>
-                <textarea name="name" class="form-control" rows="8" cols="80" placeholder="Add some note or description about this vendor..."></textarea>
+                <label for="brand_desc">Description <small class="text-muted">(Optional)</small></label>
+                <textarea name="brand_desc" class="form-control" id="brand_desc" rows="8" cols="80" placeholder="Add some note or description about this vendor..."></textarea>
               </div>
               <small class="text-muted"><em>Please double check information before submitting.</em></small>
             </div>
             <div class="modal-footer">
               <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-              <input type="submit" class="btn btn-primary" value="Add Brand">
+              <input type="submit" name="addBrand" class="btn btn-primary" value="Add Brand">
+              <?php
+                if (isset($_POST['addBrand'])) {
+                  $brandName = mysqli_real_escape_string($appconnect, $_POST['brand_name']);
+                  $brandDesc = mysqli_real_escape_string($appconnect, $_POST['brand_desc']);
+
+                  mysqli_query($appconnect, "INSERT INTO `product_brands` (
+                                                          `id`,
+                                                          `name`,
+                                                          `description`,
+                                                          `visibility`,
+                                                          `date_created`,
+                                                          `last_updated`
+                                                        ) VALUES (
+                                                          NULL,
+                                                          '$brandName',
+                                                          '$brandDesc',
+                                                          '1',
+                                                          current_timestamp(),
+                                                          NULL)"
+                                                        );
+                }
+              ?>
             </div>
           </form>
         </div>

@@ -28,7 +28,7 @@
                   <option>Cables & Chargers</option>
                   <option>Power Supplies</option>
                 </select>
-                <small class="float-right">Product type not listed here? <a href="#"data-toggle="modal" data-target="#addProductTypeModal">Add new</a> </small>
+                <small class="float-right">Product type not listed here? <a href="#" data-toggle="modal" data-target="#addProductTypeModal">Add new</a> </small>
               </div>
               <div class="form-group">
                 <label>Product Brand</label>
@@ -43,7 +43,7 @@
                   <option>Razer</option>
                   <option>MSI</option>
                 </select>
-                <small class="float-right">Products brand not listed here? <a href="#"data-toggle="modal" data-target="#addProductBrandModal">Add new</a> </small>
+                <small class="float-right">Products brand not listed here? <a href="#" data-toggle="modal" data-target="#addProductBrandModal">Add new</a> </small>
               </div>
               <div class="form-group">
                 <label>Product Vendor</label>
@@ -56,7 +56,7 @@
                   <option>Waleed Ahmad</option>
                   <option>Abdul Wahid</option>
                 </select>
-                <small class="float-right">Product vendor not listed here? <a href="#"data-toggle="modal" data-target="#addProductVendorModal">Add new</a> </small>
+                <small class="float-right">Product vendor not listed here? <a href="#" data-toggle="modal" data-target="#addProductVendorModal">Add new</a> </small>
               </div>
               <div class="form-group">
                 <label for="">Product Name</label>
