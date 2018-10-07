@@ -1,17 +1,20 @@
-<?php ?>
+<?php
+// Define ABSPATH as this file's directory
+if (!defined('ABSPATH')) {
+  define('ABSPATH', dirname(__FILE__).'/');
+}
+
+define('APPINC', 'app-includes');
+
+
+  $PAGE_TITLE  = "Top Selling";
+  $PAGE_DESC   = "...";
+  $PAGE_AUTHOR = "..."
+
+?>
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <title>RC-POS - Top Selling</title>
-    <link href="app-include/css/bootstrap.css" rel="stylesheet">
-    <link href="app-include/css/font-awesome.css" rel="stylesheet" type="text/css">
-    <link href="app-include/css/styles.css" rel="stylesheet">
-  </head>
+  <?php require (ABSPATH.APPINC."/page-unit/head.php"); ?>
   <body id="page-top">
     <nav class="navbar navbar-expand navbar-dark bg-dark static-top">
       <a class="navbar-brand mr-1" href="index.php">Acix Sales Pro</a>
@@ -613,4 +616,22 @@
       <script src="app-include/js/chart-pie-demo-3months.js"></script>
       <script src="app-include/js/chart-pie-demo-6months.js"></script>
     </body>
+  </html>
+
+  <br><br><br>
+  <?php require (ABSPATH.APPINC.'/page-unit/footer.php'); ?>
+  </div>
+  </div>
+  <?php
+  include (ABSPATH.APPINC.'/page-unit/scroll-to-top.php');
+  require (ABSPATH.APPINC.'/page-unit/modal-logout.php');
+  require (ABSPATH.APPINC.'/page-unit/modal-add-sale.php');
+  require (ABSPATH.APPINC.'/page-unit/modal-add-product.php');
+  require (ABSPATH.APPINC.'/page-unit/modal-add-product-type.php');
+  require (ABSPATH.APPINC.'/page-unit/modal-add-brand.php');
+  require (ABSPATH.APPINC.'/page-unit/modal-add-vendor.php');
+  require (ABSPATH.APPINC.'/page-unit/modal-add-expense-account.php');
+  include (ABSPATH.APPINC."/page-unit/footer-scripts.php");
+  ?>
+  </body>
   </html>

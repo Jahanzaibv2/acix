@@ -1,17 +1,20 @@
-<?php ?>
+<?php
+// Define ABSPATH as this file's directory
+if (!defined('ABSPATH')) {
+  define('ABSPATH', dirname(__FILE__).'/');
+}
+
+define('APPINC', 'app-includes');
+
+
+  $PAGE_TITLE  = "Request a New Password";
+  $PAGE_DESC   = "...";
+  $PAGE_AUTHOR = "..."
+
+?>
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <title>RC-POS - Request a New Password</title>
-    <link href="app-include/css/bootstrap.css" rel="stylesheet">
-    <link href="app-include/css/font-awesome.css" rel="stylesheet" type="text/css">
-    <link href="app-include/css/styles.css" rel="stylesheet">
-  </head>
+  <?php require (ABSPATH.APPINC."/page-unit/head.php"); ?>
   <body class="bg-dark">
       <div class="container">
         <div class="card card-login mx-auto mt-5">
