@@ -1,3 +1,4 @@
+<?php  ?>
 <!-- History -->
 <div class="card mb-3">
   <div class="card-header bg-primary text-white">
