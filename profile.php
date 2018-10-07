@@ -17,13 +17,7 @@
 <?php require (ABSPATH.APPINC."/page-unit/sidebar.php"); ?>
         <div id="content-wrapper">
           <div class="container-fluid">
-            <!-- Breadcrumbs-->
-            <ol class="breadcrumb">
-              <li class="breadcrumb-item">
-                <a href="index.php">Home</a>
-              </li>
-              <li class="breadcrumb-item active">Profile</li>
-            </ol>
+<?php require (ABSPATH.APPINC."/page-unit/breadcrumbs.php"); ?>
             <!-- Page Content -->
             <h1>Blank Page</h1>
             <hr>

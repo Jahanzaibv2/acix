@@ -17,13 +17,7 @@
 <?php require (ABSPATH.APPINC."/page-unit/sidebar.php"); ?>
         <div id="content-wrapper">
           <div class="container-fluid">
-            <!-- Breadcrumbs-->
-            <ol class="breadcrumb">
-              <li class="breadcrumb-item">
-                <a href="index.php">Home</a>
-              </li>
-              <li class="breadcrumb-item active">Revenue</li>
-            </ol>
+<?php require (ABSPATH.APPINC."/page-unit/breadcrumbs.php"); ?>
             <!-- Page Content -->
             <div class="col-12">
               <div class="card mb-3">
