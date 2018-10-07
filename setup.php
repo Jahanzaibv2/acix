@@ -12,7 +12,7 @@
 <html lang="en">
   <?php require (ABSPATH.APPINC."/page-unit/head.php"); ?>
   <body class="bg-dark">
-  <div class="container">
+    <div class="container">
       <div class="card card-register mx-auto mt-5">
         <div class="card-header bg-primary text-white">I need to some information to proceed.</div>
         <div class="card-body">
