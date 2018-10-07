@@ -19,12 +19,18 @@
         <div class="container-fluid">
           <?php require (ABSPATH.APPINC."/page-unit/breadcrumbs.php"); ?>
           <div class="row">
-            <?php
-              require (ABSPATH.APPINC."/cards/sales-count.php");
-              require (ABSPATH.APPINC."/cards/top-sellings.php");
-              require (ABSPATH.APPINC."/cards/short-items.php");
-              require (ABSPATH.APPINC."/cards/improvements.php");
-            ?>
+            <div class="col-md-6 col-sm-12 col-xs-12 mb-3">
+              <?php require (ABSPATH.APPINC."/cards/sales-count.php"); ?>
+            </div>
+            <div class="col-md-6 col-sm-12 col-xs-12 mb-3">
+              <?php require (ABSPATH.APPINC."/cards/top-sellings.php"); ?>
+            </div>
+            <div class="col-md-6 col-sm-12 col-xs-12 mb-3">
+              <?php require (ABSPATH.APPINC."/cards/short-items.php"); ?>
+            </div>
+            <div class="col-md-6 col-sm-12 col-xs-12 mb-3">
+              <?php require (ABSPATH.APPINC."/cards/improvements.php"); ?>
+            </div>
           </div>
           <?php require (ABSPATH.APPINC."/charts/demo-area-chart.php"); ?>
         </div>

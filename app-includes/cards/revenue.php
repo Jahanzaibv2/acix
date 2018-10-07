@@ -1,5 +1,4 @@
 <?php  ?>
-<div class="col-xl-6 col-sm-12 mb-3">
   <div class="card o-hidden h-100">
     <div class="card-header bg-info text-white">
       <h1>Revenue</h1>
@@ -19,5 +18,4 @@
         <i class="fa fa-angle-right"></i>
       </span>
     </a>
-  </div>
   </div>

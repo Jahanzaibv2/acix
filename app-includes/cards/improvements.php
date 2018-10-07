@@ -1,6 +1,4 @@
 <?php  ?>
-<!-- Improvements Card -->
-            <div class="col-md-6 col-sm-12 col-xs-12 mb-3">
               <div class="card text-white bg-warning o-hidden h-100">
                 <div class="card-header">
                   <h1>Improvements</h1>
@@ -21,4 +19,3 @@
                   </span>
                 </a>
               </div>
-            </div>

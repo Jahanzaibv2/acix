@@ -1,5 +1,4 @@
 <?php  ?>
-<div class="col-xl-6 col-sm-12 mb-3">
   <a href="#" class="no-text-decorations">
     <div class="card o-hidden h-100">
       <div class="card-body bg-dark text-white">
@@ -13,4 +12,3 @@
       </div>
     </div>
   </a>
-  </div>
