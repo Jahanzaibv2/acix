@@ -10,42 +10,32 @@
 ?>
 <!DOCTYPE html>
 <html lang="en">
-<?php require (ABSPATH.APPINC."/page-unit/head.php"); ?>
+  <?php require (ABSPATH.APPINC."/page-unit/head.php"); ?>
   <body id="page-top">
-<?php require (ABSPATH.APPINC."/page-unit/nav.php"); ?>
+    <?php require (ABSPATH.APPINC."/page-unit/nav.php"); ?>
     <div id="wrapper">
-<?php require (ABSPATH.APPINC."/page-unit/sidebar.php"); ?>
-        <div id="content-wrapper">
-          <div class="container-fluid">
-<?php require (ABSPATH.APPINC."/page-unit/breadcrumbs.php"); ?>
-            <!-- Page Content -->
-            <div class="col-12">
-              <div class="card mb-3">
-                <div class="card-header bg-primary text-white">
-                  <i class="fa fa-chart-bar"></i>
-                  Revenue Chart
-                </div>
-                <div class="card-body">
-                  <canvas id="myBarChart" width="100%" height="30"></canvas>
-                </div>
-                <div class="card-footer small text-muted">Updated yesterday at 11:59 PM</div>
-              </div>
-            </div>
+      <?php require (ABSPATH.APPINC."/page-unit/sidebar.php"); ?>
+      <div id="content-wrapper">
+        <div class="container-fluid">
+          <?php require (ABSPATH.APPINC."/page-unit/breadcrumbs.php"); ?>
+          <div class="col-12">
+            <?php require (ABSPATH.APPINC."/charts/demo-revenue-bar-chart.php"); ?>
           </div>
-          <br><br><br>
-          <?php require (ABSPATH.APPINC.'/page-unit/footer.php'); ?>
         </div>
+        <br><br><br>
+        <?php require (ABSPATH.APPINC.'/page-unit/footer.php'); ?>
       </div>
-  <?php
-    include (ABSPATH.APPINC.'/page-unit/scroll-to-top.php');
-    require (ABSPATH.APPINC.'/page-unit/modal-logout.php');
-    require (ABSPATH.APPINC.'/page-unit/modal-add-sale.php');
-    require (ABSPATH.APPINC.'/page-unit/modal-add-product.php');
-    require (ABSPATH.APPINC.'/page-unit/modal-add-product-type.php');
-    require (ABSPATH.APPINC.'/page-unit/modal-add-brand.php');
-    require (ABSPATH.APPINC.'/page-unit/modal-add-vendor.php');
-    require (ABSPATH.APPINC.'/page-unit/modal-add-expense-account.php');
-    include (ABSPATH.APPINC."/page-unit/footer-scripts.php");
-  ?>
+    </div>
+    <?php
+      include (ABSPATH.APPINC.'/page-unit/scroll-to-top.php');
+      require (ABSPATH.APPINC.'/page-unit/modal-logout.php');
+      require (ABSPATH.APPINC.'/page-unit/modal-add-sale.php');
+      require (ABSPATH.APPINC.'/page-unit/modal-add-product.php');
+      require (ABSPATH.APPINC.'/page-unit/modal-add-product-type.php');
+      require (ABSPATH.APPINC.'/page-unit/modal-add-brand.php');
+      require (ABSPATH.APPINC.'/page-unit/modal-add-vendor.php');
+      require (ABSPATH.APPINC.'/page-unit/modal-add-expense-account.php');
+      include (ABSPATH.APPINC."/page-unit/footer-scripts.php");
+    ?>
     </body>
   </html>
