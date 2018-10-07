@@ -14,7 +14,7 @@ define('APPINC', 'app-includes');
 ?>
 <!DOCTYPE html>
 <html lang="en">
-  <?php include (ABSPATH.APPINC."/page-unit/head.php"); ?>
+  <?php require (ABSPATH.APPINC."/page-unit/head.php"); ?>
   <body id="page-top">
     <nav class="navbar navbar-expand navbar-dark bg-dark static-top">
       <a class="navbar-brand mr-1" href="index.php">Acix Sales Pro</a>
