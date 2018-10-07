@@ -1,3 +1,4 @@
+<?php  ?>
 <div class="card o-hidden h-100">
   <div class="card-header bg-primary text-white">
     <h1>Expense</h1>
