@@ -18,8 +18,10 @@
       <div id="content-wrapper">
         <div class="container-fluid">
           <?php require (ABSPATH.APPINC."/page-unit/breadcrumbs.php"); ?>
-          <div class="col-12">
-            <?php require (ABSPATH.APPINC."/charts/demo-revenue-bar-chart.php"); ?>
+          <div class="row">
+            <div class="col-12">
+              <?php require (ABSPATH.APPINC."/charts/demo-revenue-bar-chart.php"); ?>
+            </div>
           </div>
         </div>
         <br><br><br>
