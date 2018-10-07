@@ -7,12 +7,6 @@ if (!defined('ABSPATH')) {
   define('APPINC', 'app-includes');
 
   include 'tests/appconnect.php';
-  include 'tests/usertable.php';
-  include 'tests/product_types.php';
-  include 'tests/product_brands.php';
-  include 'tests/vendors.php';
-  include 'tests/expense_accounts.php';
-  include 'tests/products.php';
-  include 'tests/sales.php';
+  include 'tests/create-db-tables.php';
 
 ?>
