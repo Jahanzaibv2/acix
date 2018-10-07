@@ -1,3 +1,4 @@
+<?php  ?>
 <!-- Sales Records Table : Last 30 Days -->
 <div class="card mb-3">
   <div class="card-header bg-primary text-white">
