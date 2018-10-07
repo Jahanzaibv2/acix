@@ -46,8 +46,8 @@
         </div>
       </div>
     </div>
-    <script src="app-include/js/jquery.min.js"></script>
-    <script src="app-include/js/bootstrap.bundle.min.js"></script>
-    <script src="app-include/js/jquery.easing.min.js"></script>
+    <?php
+      include (ABSPATH.APPINC."/page-unit/footer-scripts.php");
+    ?>
   </body>
 </html>
