@@ -23,7 +23,7 @@
           <?php require (ABSPATH.APPINC."/page-unit/breadcrumbs.php"); ?>
           <div class="row text-center">
             <div class="col-md-12 text-center mb-3">
-              <?php echo $ADD_PRD_ERROR; ?>
+              <?php echo $ADD_ERROR_MSG; ?>
             </div>
           </div>
           <div class="row">

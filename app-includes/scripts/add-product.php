@@ -14,7 +14,8 @@
     $row = mysqli_fetch_array($res);
 
     if ((mysqli_num_rows($res))>0) {
-      $ADD_PRD_ERROR = "<a href='' class='no-text-decoration text-danger' data-toggle='modal' data-target='#queryStatus'>ADD_PRD_ERROR</a>";
+      $ADD_PRODUCT_ERROR = 1;
+      $ADD_ERROR_MSG = "<a href='' class='no-text-decoration text-danger' data-toggle='modal' data-target='#queryStatus'>ADD_PRODUCT_ERROR</a>";
     }else {
       // Adding product
       mysqli_query($appconnect, "INSERT INTO `products` (

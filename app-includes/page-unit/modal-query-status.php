@@ -5,13 +5,31 @@
         <div class="modal-content">
           <div class="modal-header bg-danger text-white">
             <h5 class="modal-title" id="queryStatus">
-              Sorry, I can't do that.
+              <?php
+                if (($ADD_PRODUCT_ERROR == 1)
+                 || ($ADD_BRAND_ERROR == 1)
+                 || ($ADD_VENDOR_ERROR == 1)
+                 || ($ADD_PTYPE_ERROR == 1)
+                 || ($ADD_SALE_ERROR == 1)
+                 || ($ADD_EACC_ERROR == 1)) {
+
+                  echo "Sorry, I can't do that.";
+                }else {
+                  // code...
+                }
+              ?>
+
             </h5>
             <button class="close text-white" type="button" data-dismiss="modal" aria-label="Close">
               <span aria-hidden="true">×</span>
             </button>
           </div>
           <div class="modal-body">
+            <?php
+              if ($ADD_PRODUCT_ERROR == 1) {
+                // code...
+              }
+            ?>
             We already have a product with this name.
             <br><br>
             I recommend using a slightly different name for this product.
