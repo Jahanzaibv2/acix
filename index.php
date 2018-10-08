@@ -14,6 +14,7 @@
 <html lang="en">
   <?php
     require (ABSPATH.APPINC.'/scripts/add-product.php');
+    require (ABSPATH.APPINC.'/scripts/add-vendor.php');
     require (ABSPATH.APPINC."/page-unit/head.php");
   ?>
   <body id="page-top">
