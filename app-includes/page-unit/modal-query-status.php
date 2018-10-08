@@ -27,17 +27,24 @@
           <div class="modal-body">
             <?php
               if ($ADD_PRODUCT_ERROR == 1) {
-                // code...
+                echo "We already have a product with this name.
+                <br><br>
+                I recommend using a slightly different name for this product.
+                This way I can track profit/loss by this product easily.
+                That'll be good!
+                <br><br>
+                <span class=\"small text-muted\">Hey, You can use <strong><?php echo $productName.' Variant 2';?></strong>
+                instead of just <strong><?php echo $productName; ?></strong> or may be something else.</span>";
+              }elseif ($ADD_VENDOR_ERROR == 1) {
+                echo "We already have a vendor named <strong>$vendorName</strong>.
+                <br><br>
+                I think this might be a mistake. But we can use a different name.
+                This way I can track profit/loss by this vendor easily.
+                <br>
+                That'll be good!";
               }
             ?>
-            We already have a product with this name.
-            <br><br>
-            I recommend using a slightly different name for this product.
-            This way I can track profit/loss by this product easily.
-            That'll be good!
-            <br><br>
-            <span class="small text-muted">Hey, You can use <strong><?php echo $productName.' Variant 2';?></strong>
-            instead of just <strong><?php echo $productName; ?></strong> or may be something else.</span>
+
           </div>
         </div>
       </div>

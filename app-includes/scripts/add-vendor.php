@@ -5,7 +5,14 @@
     $vendorEmail = mysqli_real_escape_string($appconnect, $_POST['vendor_email']);
     $vendorDesc = mysqli_real_escape_string($appconnect, $_POST['vendor_desc']);
 
-    mysqli_query($appconnect, "INSERT INTO `vendors` (
+    $res = mysqli_query($appconnect, "SELECT * FROM `vendors` WHERE `name`='$vendorName'");
+    $row = mysqli_fetch_array($res);
+
+    if ((mysqli_num_rows($res))>0) {
+      $ADD_VENDOR_ERROR = 1;
+      $ADD_ERROR_MSG = "<a href='' class='no-text-decoration text-danger' data-toggle='modal' data-target='#queryStatus'>ADD_VENDOR_ERROR</a>";
+    }else {
+      mysqli_query($appconnect, "INSERT INTO `vendors` (
                                             `id`,
                                             `name`,
                                             `phone`,
@@ -24,5 +31,6 @@
                                             current_timestamp(),
                                             NULL)"
                                           );
+    }
   }
 ?>
