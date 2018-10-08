@@ -52,6 +52,8 @@
               }elseif ($ADD_BRAND_ERROR == 1) {
                 echo "We already have a brand named <strong>$brandName</strong> listed in our database.
                 ";
+              }elseif ($ADD_EACC_ERROR == 1) {
+                echo "We already have an Expense Account with a name <strong>$accountTitle</strong>.";
               }
             ?>
 

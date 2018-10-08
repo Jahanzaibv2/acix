@@ -17,6 +17,7 @@
     require (ABSPATH.APPINC.'/scripts/add-vendor.php');
     require (ABSPATH.APPINC.'/scripts/add-product-type.php');
     require (ABSPATH.APPINC.'/scripts/add-brand.php');
+    require (ABSPATH.APPINC.'/scripts/add-expense-account.php');
     require (ABSPATH.APPINC."/page-unit/head.php");
   ?>
   <body id="page-top">

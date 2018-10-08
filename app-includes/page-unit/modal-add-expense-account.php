@@ -28,28 +28,6 @@
             <div class="modal-footer">
               <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
               <input type="submit" name="addExpenseAccount" class="btn btn-primary" value="Add Account">
-              <?php
-                if (isset($_POST['addExpenseAccount'])) {
-                  $accountTitle = mysqli_real_escape_string($appconnect, $_POST['account_title']);
-                  $accountDesc = mysqli_real_escape_string($appconnect, $_POST['account_desc']);
-
-                  mysqli_query($appconnect, "INSERT INTO `expense_accounts` (
-                                                          `id`,
-                                                          `account_title`,
-                                                          `description`,
-                                                          `visibility`,
-                                                          `date_created`,
-                                                          `last_updated`
-                                                        ) VALUES (
-                                                          NULL,
-                                                          '$accountTitle',
-                                                          '$accountDesc',
-                                                          '1',
-                                                          current_timestamp(),
-                                                          NULL)"
-                                                        );
-                }
-              ?>
             </div>
           </form>
         </div>
