@@ -15,6 +15,7 @@
   <?php
     require (ABSPATH.APPINC.'/scripts/add-product.php');
     require (ABSPATH.APPINC.'/scripts/add-vendor.php');
+    require (ABSPATH.APPINC.'/scripts/add-product-type.php');
     require (ABSPATH.APPINC."/page-unit/head.php");
   ?>
   <body id="page-top">
@@ -26,7 +27,7 @@
           <?php require (ABSPATH.APPINC."/page-unit/breadcrumbs.php"); ?>
           <div class="row text-center">
             <div class="col-md-12 text-center mb-3">
-              <?php echo $ADD_ERROR_MSG; ?>
+              <span class=""><?php echo $ADD_ERROR_MSG; ?></span>
             </div>
           </div>
           <div class="row">
