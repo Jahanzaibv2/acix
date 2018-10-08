@@ -12,8 +12,10 @@
 
 <!DOCTYPE html>
 <html lang="en">
-  <?php  require (ABSPATH.APPINC.'/scripts/add-product.php'); ?>
-  <?php require (ABSPATH.APPINC."/page-unit/head.php"); ?>
+  <?php
+    require (ABSPATH.APPINC.'/scripts/add-product.php');
+    require (ABSPATH.APPINC."/page-unit/head.php");
+  ?>
   <body id="page-top">
     <?php require (ABSPATH.APPINC."/page-unit/nav.php"); ?>
     <div id="wrapper">
