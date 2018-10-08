@@ -7,9 +7,12 @@
   $PAGE_DESC   = "...";
   $PAGE_AUTHOR = "..."
 
+
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
+  <?php  require (ABSPATH.APPINC.'/scripts/add-product.php'); ?>
   <?php require (ABSPATH.APPINC."/page-unit/head.php"); ?>
   <body id="page-top">
     <?php require (ABSPATH.APPINC."/page-unit/nav.php"); ?>
@@ -18,6 +21,11 @@
       <div id="content-wrapper">
         <div class="container-fluid">
           <?php require (ABSPATH.APPINC."/page-unit/breadcrumbs.php"); ?>
+          <div class="row text-center">
+            <div class="col-md-12 text-center mb-3">
+              <?php echo $ADD_PRD_ERROR; ?>
+            </div>
+          </div>
           <div class="row">
             <div class="col-md-6 col-sm-12 col-xs-12 mb-3">
               <?php require (ABSPATH.APPINC."/cards/sales-count.php"); ?>
@@ -47,6 +55,8 @@
       require (ABSPATH.APPINC.'/page-unit/modal-add-brand.php');
       require (ABSPATH.APPINC.'/page-unit/modal-add-vendor.php');
       require (ABSPATH.APPINC.'/page-unit/modal-add-expense-account.php');
+      require (ABSPATH.APPINC.'/page-unit/modal-query-status.php');
+      require (ABSPATH.APPINC.'/page-unit/modal-add-product-with-diff-name.php');
       include (ABSPATH.APPINC."/page-unit/footer-scripts.php");
     ?>
   </body>
