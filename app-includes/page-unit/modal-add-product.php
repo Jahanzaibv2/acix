@@ -78,8 +78,8 @@
                 <input type="number" class="form-control" name="product_price" id="product_price" placeholder="Enter cost of product per item..." required>
               </div>
               <div class="form-group">
-                <label for="sku">Product Stock <small>(How many products are you adding in stock?)</small> </label>
-                <input type="number" class="form-control" name="sku" id="sku" placeholder="Enter number of items..." required>
+                <label for="stock">Product Stock <small>(How many products are you adding in stock?)</small> </label>
+                <input type="number" class="form-control" name="stock" id="stock" placeholder="Enter number of items..." required>
                 <small class="text-muted">This will be used as product quantity in stock keeping unit.</small>
               </div>
               How are you paying for this product?
@@ -105,7 +105,7 @@
             <div class="modal-footer">
               <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
               <input type="submit" name="addProduct" class="btn btn-primary" value="Add Product">
-              
+
             </div>
           </form>
         </div>
