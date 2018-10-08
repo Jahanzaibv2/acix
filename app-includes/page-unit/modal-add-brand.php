@@ -28,28 +28,6 @@
             <div class="modal-footer">
               <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
               <input type="submit" name="addBrand" class="btn btn-primary" value="Add Brand">
-              <?php
-                if (isset($_POST['addBrand'])) {
-                  $brandName = mysqli_real_escape_string($appconnect, $_POST['brand_name']);
-                  $brandDesc = mysqli_real_escape_string($appconnect, $_POST['brand_desc']);
-
-                  mysqli_query($appconnect, "INSERT INTO `product_brands` (
-                                                          `id`,
-                                                          `name`,
-                                                          `description`,
-                                                          `visibility`,
-                                                          `date_created`,
-                                                          `last_updated`
-                                                        ) VALUES (
-                                                          NULL,
-                                                          '$brandName',
-                                                          '$brandDesc',
-                                                          '1',
-                                                          current_timestamp(),
-                                                          NULL)"
-                                                        );
-                }
-              ?>
             </div>
           </form>
         </div>

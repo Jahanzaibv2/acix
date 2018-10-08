@@ -46,9 +46,12 @@
                 echo "We already have a product type with the name <strong>$productType</strong>.
                 <br><br>
                 But we can use a different name instead.
-                As it will help us calculating profit/loss by this product types.
+                As it will help us calculating profit/loss by this product type.
                 <br>
-                That'll be GREAT!";
+                That'll be great!";
+              }elseif ($ADD_BRAND_ERROR == 1) {
+                echo "We already have a brand named <strong>$brandName</strong> listed in our database.
+                ";
               }
             ?>
 
