@@ -33,8 +33,8 @@
                 This way I can track profit/loss by this product easily.
                 That'll be good!
                 <br><br>
-                <span class=\"small text-muted\">Hey, You can use <strong><?php echo $productName.' Variant 2';?></strong>
-                instead of just <strong><?php echo $productName; ?></strong> or may be something else.</span>";
+                <span class=\"small text-muted\">Hey, You can use <strong> $productName $thisMonth</strong>
+                instead of just <strong> $productName </strong> or may be something else.</span>";
               }elseif ($ADD_VENDOR_ERROR == 1) {
                 echo "We already have a vendor named <strong>$vendorName</strong>.
                 <br><br>
@@ -56,7 +56,6 @@
                 echo "We already have an Expense Account with a name <strong>$accountTitle</strong>.";
               }
             ?>
-
           </div>
         </div>
       </div>

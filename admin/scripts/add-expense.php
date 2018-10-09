@@ -6,8 +6,8 @@
     $expenseDesc = mysqli_real_escape_string($appconnect, $_POST['expense_desc']);
 
 
-    $thisMonth = date('FY');
-    $prevMonth = date('FY', strtotime("last month"));
+    $thisMonth = date('F Y');
+    $prevMonth = date('F Y', strtotime("last month"));
 
     $addExpenseQuery = mysqli_query($appconnect, "INSERT INTO `expenses` (
                               `id`,

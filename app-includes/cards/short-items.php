@@ -1,15 +1,24 @@
-<?php  ?>
+<?php
+
+  $thisMonth = date('F Y');
+  $prevMonth = date('F Y', strtotime("last month"));
+
+  $res = mysqli_query($appconnect, "SELECT * FROM `products` WHERE `stock`<=3");
+  $shortItemsCount = mysqli_num_rows($res);
+
+
+  ?>
               <div class="card text-white bg-dark o-hidden h-100">
                 <div class="card-header">
                   <h1>Short Items</h1>
-                  <small class="float-left">Includes short and requested items</small>
+                  <small class="float-left">Includes short items</small>
                 </div>
                 <div class="card-body">
                   <div class="card-body-icon">
                     <i class="fa fa-fw fa-tags"></i>
                   </div>
                   <div class="card-text">
-                    <h1 class="text-center display-3"><strong>14</strong></h1>
+                    <h1 class="text-center display-3"><strong><?php echo $shortItemsCount; ?></strong></h1>
                   </div>
                 </div>
                 <a class="card-footer text-white clearfix small z-1" href="short-items.php">

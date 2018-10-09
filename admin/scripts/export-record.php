@@ -74,7 +74,7 @@
                 }
             } $content .="\n\n\n";
         }
-        $backup_name = $backup_name ? $backup_name : $name.""."-".date('d-m-Y')."-".rand(1,11111111).".sql";
+        $backup_name = $backup_name ? $backup_name : $name.""."-".date('F-Y')."-BKP".rand(1,11111111).".sql";
         // $backup_name = $backup_name ? $backup_name : $name.".sql";
         header('Content-Type: application/octet-stream');
         header("Content-Transfer-Encoding: Binary");

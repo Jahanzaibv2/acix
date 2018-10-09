@@ -1,6 +1,7 @@
 <?php
 
   if (isset($_POST['addProduct'])) {
+
     $typeID = mysqli_real_escape_string($appconnect, $_POST['product_type']);
     $brandID = mysqli_real_escape_string($appconnect, $_POST['product_brand']);
     $vendorID = mysqli_real_escape_string($appconnect, $_POST['vendor']);
@@ -10,8 +11,8 @@
     $paymentOption = mysqli_real_escape_string($appconnect, $_POST['payment_option']);
     $productDesc = mysqli_real_escape_string($appconnect, $_POST['product_desc']);
 
-    $thisMonth = date('FY');
-    $prevMonth = date('FY', strtotime("last month"));
+    $thisMonth = date('F Y');
+    $prevMonth = date('F Y', strtotime("last month"));
 
     // Fetches data from `products` table
     $res = mysqli_query($appconnect, "SELECT * FROM `products` WHERE `name`='$productName'");

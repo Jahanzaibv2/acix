@@ -17,8 +17,8 @@
 
 
 
-    $thisMonth = date('FY');
-    $prevMonth = date('FY', strtotime("last month"));
+    $thisMonth = date('F Y');
+    $prevMonth = date('F Y', strtotime("last month"));
 
     // Adding sales record
     $addSaleQuery = mysqli_query($appconnect, "INSERT INTO `sales` (
