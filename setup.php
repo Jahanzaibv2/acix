@@ -49,6 +49,13 @@
                 </div>
               </div>
             </div>
+            <div class="col-md-12">
+              <small>Already a user? <a href="#">Import everything</a> </small>
+            </div>
+            <hr>
+            <div class="col-md-12 text-center">
+              <span class="">Account details</span>
+            </div>
             <hr>
             <div class="form-group">
               <div class="form-label-group">
@@ -92,7 +99,7 @@
           </form>
           <div class="text-center">
             <br>
-            Not sure what to do? <a class="d-block small" href="https://github.com/appzaib/acix/">Contact developers</a>
+            Not sure what to do? <a class="d-block small" href="https://github.com/appzaib/acix/">Contact Developers</a>
           </div>
         </div>
       </div>
