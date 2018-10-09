@@ -14,12 +14,14 @@
                               `expense`,
                               `expense_acc_id`,
                               `description`,
+                              `month`,
                               `date_created`
                             ) VALUES (
                               NULL,
                               '$thisExpense',
                               '$accountID',
                               '$expenseDesc',
+                              '$thisMonth',
                               current_timestamp())"
                             );
     if ($addExpenseQuery) {
@@ -44,7 +46,7 @@
                   WHERE `store_account`.`month` = '$thisMonth'"
                 );
     }else {
-      // $addExpenseQuery failed! 
+      // $addExpenseQuery failed!
     }
 
 

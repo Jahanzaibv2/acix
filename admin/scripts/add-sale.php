@@ -1,4 +1,5 @@
 <?php
+
   if (isset($_POST['addSale'])) {
 
     $productID = mysqli_real_escape_string($appconnect, $_POST['product_id']);
