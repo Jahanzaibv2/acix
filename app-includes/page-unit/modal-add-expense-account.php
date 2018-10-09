@@ -5,7 +5,7 @@
         <div class="modal-content">
           <div class="modal-header bg-primary text-white">
             <h5 class="modal-title" id="exampleModalLabel">
-              <i class="fa fa-dollar"></i>
+              <i class="fa fa-bank"></i>
               Add Expense Account
             </h5>
             <button class="close text-white" type="button" data-dismiss="modal" aria-label="Close">
@@ -21,7 +21,7 @@
               </div>
               <div class="form-group">
                 <label for="account_desc">Description <small class="text-muted">(Optional)</small></label>
-                <textarea name="account_desc" class="form-control" id="account_desc" cols="80" placeholder="Add some note or description about this vendor..."></textarea>
+                <textarea name="account_desc" class="form-control" id="account_desc" cols="80" placeholder="Add some note or description about this account..."></textarea>
               </div>
               <small class="text-muted"><em>Please double check information before submitting.</em></small>
             </div>

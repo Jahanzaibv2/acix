@@ -21,7 +21,7 @@
               </div>
               <div class="form-group">
                 <label for="brand_desc">Description <small class="text-muted">(Optional)</small></label>
-                <textarea name="brand_desc" class="form-control" id="brand_desc" rows="8" cols="80" placeholder="Add some note or description about this vendor..."></textarea>
+                <textarea name="brand_desc" class="form-control" id="brand_desc" rows="8" cols="80" placeholder="Add some note or description about this brand..."></textarea>
               </div>
               <small class="text-muted"><em>Please double check information before submitting.</em></small>
             </div>

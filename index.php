@@ -13,11 +13,12 @@
 <!DOCTYPE html>
 <html lang="en">
   <?php
-    require (ABSPATH.APPINC.'/scripts/add-product.php');
-    require (ABSPATH.APPINC.'/scripts/add-vendor.php');
-    require (ABSPATH.APPINC.'/scripts/add-product-type.php');
-    require (ABSPATH.APPINC.'/scripts/add-brand.php');
-    require (ABSPATH.APPINC.'/scripts/add-expense-account.php');
+    require (ABSPATH.'/admin/scripts/add-product.php');
+    require (ABSPATH.'/admin/scripts/add-vendor.php');
+    require (ABSPATH.'/admin/scripts/add-product-type.php');
+    require (ABSPATH.'/admin/scripts/add-brand.php');
+    require (ABSPATH.'/admin/scripts/add-expense-account.php');
+    require (ABSPATH.'/admin/scripts/add-expense.php');
     require (ABSPATH.APPINC."/page-unit/head.php");
   ?>
   <body id="page-top">
@@ -61,6 +62,7 @@
       require (ABSPATH.APPINC.'/page-unit/modal-add-brand.php');
       require (ABSPATH.APPINC.'/page-unit/modal-add-vendor.php');
       require (ABSPATH.APPINC.'/page-unit/modal-add-expense-account.php');
+      require (ABSPATH.APPINC.'/page-unit/modal-add-expense.php');
       require (ABSPATH.APPINC.'/page-unit/modal-query-status.php');
       require (ABSPATH.APPINC.'/page-unit/modal-add-product-with-diff-name.php');
       include (ABSPATH.APPINC."/page-unit/footer-scripts.php");

@@ -72,7 +72,7 @@
             <div class="modal-footer">
               <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
               <input type="submit" name="addProduct" class="btn btn-primary" value="Add Product">
-                <?php require (ABSPATH.APPINC.'/scripts/add-product.php'); ?>
+                <?php require (ABSPATH.'/admin/scripts/add-product.php'); ?>
             </div>
           </form>
         </div>

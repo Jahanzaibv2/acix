@@ -29,7 +29,8 @@
             <a class="dropdown-item" href="#" data-toggle="modal" data-target="#addProductVendorModal"> <i class="fa fa-user"></i> New Product Vendor</a>
             <a class="dropdown-item" href="#" data-toggle="modal" data-target="#addProductBrandModal"> <i class="fa fa-industry"></i> New Product Brand</a>
             <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="#" data-toggle="modal" data-target="#addExpenseAccountModal"> <i class="fa fa-dollar"></i> New Expense Account</a>
+            <a class="dropdown-item" href="#" data-toggle="modal" data-target="#addExpenseModal"> <i class="fa fa-dollar"></i> New Expense</a>
+            <a class="dropdown-item" href="#" data-toggle="modal" data-target="#addExpenseAccountModal"> <i class="fa fa-bank"></i> New Expense Account</a>
           </div>
         </li>
         <li class="nav-item dropdown no-arrow mx-1">
