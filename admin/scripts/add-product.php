@@ -110,8 +110,8 @@
               * has balance zero(0) and does not update balance as there was no
               * previous record for store account found.
               * In short: Updating store account's balance and expense could result
-              * in negative value. This part assumes that user has mistakenly
-              * requested to deduct amount from store account.
+              * in negative value. This part assumes This part assumes that user
+              * has just installed application.
               */
             }
 
