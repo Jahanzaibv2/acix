@@ -13,7 +13,7 @@
       </div>
     </div>
     <a class="card-footer clearfix small z-1" href="accounts.php">
-      <span class="float-left">View Details</span>
+      <span class="float-left">Check Expense Accounts</span>
       <span class="float-right">
         <i class="fa fa-angle-right"></i>
       </span>
