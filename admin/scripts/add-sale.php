@@ -38,6 +38,7 @@
                               );
 
     if ($addSaleQuery) {
+
       // Expense added. Proceeds with deducting amount from the store account
 
       //Fetches data from products, and updates stock
@@ -49,7 +50,7 @@
 
       // Updates stock value
       mysqli_query($appconnect, "UPDATE `products` SET
-                  `stock` = '13',
+                  `stock` = '$newStock',
                   `last_updated` = current_timestamp()
                   WHERE `products`.`id`='$productID'"
                 );
@@ -122,9 +123,9 @@
 
         }else {
           /*
-          * Assumes that there is no record for previous month.
-          * Continues updating data for current month
-          */
+           * Assumes that there is no record for previous month.
+           * Continues updating data for current month
+           */
 
           // Fetches data from store account for current month
           $res = mysqli_query($appconnect, "SELECT * FROM `store_account` WHERE `month`='$thisMonth'");
