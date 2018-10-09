@@ -42,7 +42,8 @@
       mysqli_query($appconnect, "UPDATE `store_account` SET
                   `balance` = '$newBalance',
                   `income` = '$income',
-                  `expense` = '$newExpense'
+                  `expense` = '$newExpense',
+                  `last_updated` = current_timestamp()
                   WHERE `store_account`.`month` = '$thisMonth'"
                 );
 
@@ -60,13 +61,15 @@
                     `month`,
                     `income`,
                     `expense`,
-                    `date_created`
+                    `date_created`,
+                    `last_updated`
                   ) VALUES (
                     NULL,
                     '0',
                     '$thisMonth',
                     '0',
                     '0',
+                    current_timestamp(),
                     current_timestamp())"
                   );
 
@@ -83,7 +86,8 @@
           mysqli_query($appconnect, "UPDATE `store_account` SET
                       `balance` = '$balance',
                       `income` = '0',
-                      `expense` = '0'
+                      `expense` = '0',
+                      `last_updated` = current_timestamp()
                       WHERE `store_account`.`month` = '$thisMonth'"
                     );
 
@@ -94,10 +98,31 @@
           * There won't be any balance in store account, because default new record
           * has balance zero(0) and does not update balance as there was no
           * previous record for store account found.
-          * In short: Updating store account's balance and expense could result
+          * In short: Updating store account's balance could result
           * in negative value. This part assumes that user has just installed
           * application.
           */
+
+          // NOTE: This does add expense even store balance is zero
+
+          // Fetches data from store account for current month
+          $res = mysqli_query($appconnect, "SELECT * FROM `store_account` WHERE `month`='$thisMonth'");
+          $row = mysqli_fetch_array($res);
+          $balance = $row['balance'];
+          $income = $row['income'];
+          $thatExpense = $row['expense'];
+
+          // Sets updated data
+          $newExpense = $thatExpense + $thisExpense;
+
+          // Updates data for current month
+          mysqli_query($appconnect, "UPDATE `store_account` SET
+                      `balance` = '$balance',
+                      `income` = '$income',
+                      `expense` = '$newExpense',
+                      `last_updated` = current_timestamp()
+                      WHERE `store_account`.`month` = '$thisMonth'"
+                    );
         }
 
       }

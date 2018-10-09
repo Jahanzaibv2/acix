@@ -75,13 +75,15 @@
                         `month`,
                         `income`,
                         `expense`,
-                        `date_created`
+                        `date_created`,
+                        `last_updated`
                       ) VALUES (
                         NULL,
                         '0',
                         '$thisMonth',
                         '0',
                         '0',
+                        current_timestamp(),
                         current_timestamp())"
                       );
 
@@ -98,7 +100,8 @@
               mysqli_query($appconnect, "UPDATE `store_account` SET
                           `balance` = '$balance',
                           `income` = '0',
-                          `expense` = '0'
+                          `expense` = '0',
+                          `last_updated` = current_timestamp()
                           WHERE `store_account`.`month` = '$thisMonth'"
                         );
 
@@ -133,7 +136,8 @@
             mysqli_query($appconnect, "UPDATE `store_account` SET
                         `balance` = '$newBalance',
                         `income` = '$income',
-                        `expense` = '$newExpense'
+                        `expense` = '$newExpense',
+                        `last_updated` = current_timestamp()
                         WHERE `store_account`.`month` = '$thisMonth'"
                       );
           } // ends else statement
