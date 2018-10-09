@@ -13,6 +13,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <?php
+    require (ABSPATH.'/admin/scripts/add-sale.php');
     require (ABSPATH.'/admin/scripts/add-product.php');
     require (ABSPATH.'/admin/scripts/add-vendor.php');
     require (ABSPATH.'/admin/scripts/add-product-type.php');
