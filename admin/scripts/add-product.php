@@ -48,7 +48,7 @@
                                       '$productDesc',
                                       '1',
                                       current_timestamp(),
-                                      NULL)"
+                                      current_timestamp())"
                                     );
 
       if ($addProductQuery) {

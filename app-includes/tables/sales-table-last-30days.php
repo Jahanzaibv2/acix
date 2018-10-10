@@ -61,8 +61,8 @@
                 <td><?php echo $productName; ?></td>
                 <td><?php echo $saleDesc; ?></td>
                 <td class="<?php if ($stockValue <= 3) { echo 'text-danger'; }else { echo 'text-primary'; } ?>"><?php echo $stockValue; ?></td>
-                <td>Rs<?php echo $productPrice;  ?></td>
-                <td class="text-primary">Rs<?php echo $saleProfit  ?></td>
+                <td>Rs<?php echo(number_format($productPrice));  ?></td>
+                <td class="text-primary">Rs<?php echo(number_format($saleProfit));  ?></td>
                 <td><?php echo $saleDate; ?></td>
               </tr>
               <?php
@@ -73,5 +73,5 @@
       </table>
     </div>
   </div>
-  <div class="card-footer small text-muted">Updated yesterday at 11:59 PM</div>
+  <div class="card-footer small text-muted">Updated <?php echo $saleDate; ?></div>
 </div>
