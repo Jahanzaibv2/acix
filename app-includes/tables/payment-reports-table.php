@@ -12,8 +12,8 @@
       <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
         <thead>
           <tr>
-            <th>Description</th>
             <th>Transaction Type</th>
+            <th>Description</th>
             <th>Account</th>
             <th>Amount</th>
             <th>Date</th>
@@ -21,8 +21,8 @@
         </thead>
         <tfoot>
           <tr>
-            <th>Description</th>
             <th>Transaction Type</th>
+            <th>Description</th>
             <th>Account</th>
             <th>Amount</th>
             <th>Date</th>
@@ -55,8 +55,8 @@
               ?>
 
               <tr>
-                <td><?php echo $saleDesc; ?></td>
                 <td class="text-primary">Income</td>
+                <td><?php echo $saleDesc; ?></td>
                 <td>Store Account</td>
                 <td><?php echo (number_format($amount)); ?></td>
                 <td><?php echo $saleDate; ?></td>
@@ -85,8 +85,8 @@
                 ?>
 
                 <tr>
-                  <td><?php echo $expenseDesc; ?></td>
                   <td class="text-danger">Expense</td>
+                  <td><?php echo $expenseDesc; ?></td>
                   <td><?php echo $expenseAccount; ?></td>
                   <td><?php echo (number_format($expenseAmount)); ?></td>
                   <td><?php echo $expenseDate; ?></td>
@@ -100,5 +100,5 @@
       </table>
     </div>
   </div>
-  <div class="card-footer small text-muted"><?php echo $thisMonth; ?> | <a href="?month=<?php echo $prevMonth; ?>&year=2018"><?php echo $prevMonth; ?></a> | <a href="?year=2018">All 2018</a> </div>
+  <div class="card-footer small text-muted"><?php echo $thisMonth; ?> | <a href="?month=<?php echo $lastMonth; ?>&year=2018"><?php echo $lastMonth; ?></a> | <a href="?year=2018">All 2018</a> </div>
 </div>
