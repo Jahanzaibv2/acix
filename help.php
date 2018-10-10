@@ -1,5 +1,13 @@
 <?php
 
+  header('location: /');
+  exit;
+
+  //////////////////////////////////////////////
+  //
+  // Discarding Help Docs, for now.
+  //
+  /////////////////////////////////////////////
   require ('load.php');
 
 
