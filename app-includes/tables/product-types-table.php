@@ -1,4 +1,6 @@
-<?php  ?>
+<?php
+  include include (ABSPATH.'/admin/scripts/get-product-types.php');
+?>
 <!-- Product Types Table -->
 <div class="card mb-3">
   <div class="card-header bg-primary text-white">
@@ -18,177 +20,56 @@
           <tr>
             <th>PTID</th>
             <th>Product Type</th>
+            <th>Description</th>
             <th>Total Products</th>
-            <th>Brands</th>
-            <th>Vendors</th>
-            <th>Price Range</th>
-            <th>Inventory Worth</th>
-            <th>Profit</th>
+            <th>Date Created</th>
+            <th>Action</th>
           </tr>
         </thead>
         <tfoot>
           <tr>
             <th>PTID</th>
             <th>Product Type</th>
+            <th>Description</th>
             <th>Total Products</th>
-            <th>Brands</th>
-            <th>Vendors</th>
-            <th>Price Range</th>
-            <th>Inventory Worth</th>
-            <th>Profit</th>
+            <th>Date Created</th>
+            <th>Action</th>
           </tr>
         </tfoot>
         <tbody>
-          <tr>
-            <td>66489</td>
-            <td>Mouse &amp; Pointing Devices</td>
-            <td><strong>7</strong> Variants with <strong>21</strong> items in stock</td>
-            <td>A4-Tech, Digilinks, DELL, HP, Apple</td>
-            <td>Anees Ahmad, Nouman Aslam, Haider Abbas, Mian Asim</td>
-            <td>Rs210-2200</td>
-            <td>Rs13635</td>
-            <td><span class="text-primary"><i class="fa fa-arrow-up"></i>12%</span> Rs1875</td>
-          </tr>
-          <tr>
-            <td>66489</td>
-            <td>Mouse &amp; Pointing Devices</td>
-            <td><strong>7</strong> Variants with <strong>21</strong> items in stock</td>
-            <td>A4-Tech, Digilinks, DELL, HP, Apple</td>
-            <td>Anees Ahmad, Nouman Aslam, Haider Abbas, Mian Asim</td>
-            <td>Rs210-2200</td>
-            <td>Rs13635</td>
-            <td><span class="text-primary"><i class="fa fa-arrow-up"></i>12%</span> Rs1875</td>
-          </tr>
-          <tr>
-            <td>66489</td>
-            <td>Mouse &amp; Pointing Devices</td>
-            <td><strong>7</strong> Variants with <strong>21</strong> items in stock</td>
-            <td>A4-Tech, Digilinks, DELL, HP, Apple</td>
-            <td>Anees Ahmad, Nouman Aslam, Haider Abbas, Mian Asim</td>
-            <td>Rs210-2200</td>
-            <td>Rs13635</td>
-            <td><span class="text-primary"><i class="fa fa-arrow-up"></i>12%</span> Rs1875</td>
-          </tr>
-          <tr>
-            <td>66489</td>
-            <td>Mouse &amp; Pointing Devices</td>
-            <td><strong>7</strong> Variants with <strong>21</strong> items in stock</td>
-            <td>A4-Tech, Digilinks, DELL, HP, Apple</td>
-            <td>Anees Ahmad, Nouman Aslam, Haider Abbas, Mian Asim</td>
-            <td>Rs210-2200</td>
-            <td>Rs13635</td>
-            <td><span class="text-primary"><i class="fa fa-arrow-up"></i>12%</span> Rs1875</td>
-          </tr>
-          <tr>
-            <td>66489</td>
-            <td>Mouse &amp; Pointing Devices</td>
-            <td><strong>7</strong> Variants with <strong>21</strong> items in stock</td>
-            <td>A4-Tech, Digilinks, DELL, HP, Apple</td>
-            <td>Anees Ahmad, Nouman Aslam, Haider Abbas, Mian Asim</td>
-            <td>Rs210-2200</td>
-            <td>Rs13635</td>
-            <td><span class="text-primary"><i class="fa fa-arrow-up"></i>12%</span> Rs1875</td>
-          </tr>
-          <tr>
-            <td>66489</td>
-            <td>Mouse &amp; Pointing Devices</td>
-            <td><strong>7</strong> Variants with <strong>21</strong> items in stock</td>
-            <td>A4-Tech, Digilinks, DELL, HP, Apple</td>
-            <td>Anees Ahmad, Nouman Aslam, Haider Abbas, Mian Asim</td>
-            <td>Rs210-2200</td>
-            <td>Rs13635</td>
-            <td><span class="text-primary"><i class="fa fa-arrow-up"></i>12%</span> Rs1875</td>
-          </tr>
-          <tr>
-            <td>66489</td>
-            <td>Mouse &amp; Pointing Devices</td>
-            <td><strong>7</strong> Variants with <strong>21</strong> items in stock</td>
-            <td>A4-Tech, Digilinks, DELL, HP, Apple</td>
-            <td>Anees Ahmad, Nouman Aslam, Haider Abbas, Mian Asim</td>
-            <td>Rs210-2200</td>
-            <td>Rs13635</td>
-            <td><span class="text-primary"><i class="fa fa-arrow-up"></i>12%</span> Rs1875</td>
-          </tr>
-          <tr>
-            <td>66489</td>
-            <td>Mouse &amp; Pointing Devices</td>
-            <td><strong>7</strong> Variants with <strong>21</strong> items in stock</td>
-            <td>A4-Tech, Digilinks, DELL, HP, Apple</td>
-            <td>Anees Ahmad, Nouman Aslam, Haider Abbas, Mian Asim</td>
-            <td>Rs210-2200</td>
-            <td>Rs13635</td>
-            <td><span class="text-primary"><i class="fa fa-arrow-up"></i>12%</span> Rs1875</td>
-          </tr>
-          <tr>
-            <td>66489</td>
-            <td>Mouse &amp; Pointing Devices</td>
-            <td><strong>7</strong> Variants with <strong>21</strong> items in stock</td>
-            <td>A4-Tech, Digilinks, DELL, HP, Apple</td>
-            <td>Anees Ahmad, Nouman Aslam, Haider Abbas, Mian Asim</td>
-            <td>Rs210-2200</td>
-            <td>Rs13635</td>
-            <td><span class="text-primary"><i class="fa fa-arrow-up"></i>12%</span> Rs1875</td>
-          </tr>
-          <tr>
-            <td>66489</td>
-            <td>Mouse &amp; Pointing Devices</td>
-            <td><strong>7</strong> Variants with <strong>21</strong> items in stock</td>
-            <td>A4-Tech, Digilinks, DELL, HP, Apple</td>
-            <td>Anees Ahmad, Nouman Aslam, Haider Abbas, Mian Asim</td>
-            <td>Rs210-2200</td>
-            <td>Rs13635</td>
-            <td><span class="text-primary"><i class="fa fa-arrow-up"></i>12%</span> Rs1875</td>
-          </tr>
-          <tr>
-            <td>66489</td>
-            <td>Mouse &amp; Pointing Devices</td>
-            <td><strong>7</strong> Variants with <strong>21</strong> items in stock</td>
-            <td>A4-Tech, Digilinks, DELL, HP, Apple</td>
-            <td>Anees Ahmad, Nouman Aslam, Haider Abbas, Mian Asim</td>
-            <td>Rs210-2200</td>
-            <td>Rs13635</td>
-            <td><span class="text-primary"><i class="fa fa-arrow-up"></i>12%</span> Rs1875</td>
-          </tr>
-          <tr>
-            <td>66489</td>
-            <td>Mouse &amp; Pointing Devices</td>
-            <td><strong>7</strong> Variants with <strong>21</strong> items in stock</td>
-            <td>A4-Tech, Digilinks, DELL, HP, Apple</td>
-            <td>Anees Ahmad, Nouman Aslam, Haider Abbas, Mian Asim</td>
-            <td>Rs210-2200</td>
-            <td>Rs13635</td>
-            <td><span class="text-primary"><i class="fa fa-arrow-up"></i>12%</span> Rs1875</td>
-          </tr>
-          <tr>
-            <td>66489</td>
-            <td>Mouse &amp; Pointing Devices</td>
-            <td><strong>7</strong> Variants with <strong>21</strong> items in stock</td>
-            <td>A4-Tech, Digilinks, DELL, HP, Apple</td>
-            <td>Anees Ahmad, Nouman Aslam, Haider Abbas, Mian Asim</td>
-            <td>Rs210-2200</td>
-            <td>Rs13635</td>
-            <td><span class="text-primary"><i class="fa fa-arrow-up"></i>12%</span> Rs1875</td>
-          </tr>
-          <tr>
-            <td>66489</td>
-            <td>Mouse &amp; Pointing Devices</td>
-            <td><strong>7</strong> Variants with <strong>21</strong> items in stock</td>
-            <td>A4-Tech, Digilinks, DELL, HP, Apple</td>
-            <td>Anees Ahmad, Nouman Aslam, Haider Abbas, Mian Asim</td>
-            <td>Rs210-2200</td>
-            <td>Rs13635</td>
-            <td><span class="text-primary"><i class="fa fa-arrow-up"></i>12%</span> Rs1875</td>
-          </tr>
-          <tr>
-            <td>66489</td>
-            <td>Mouse &amp; Pointing Devices</td>
-            <td><strong>7</strong> Variants with <strong>21</strong> items in stock</td>
-            <td>A4-Tech, Digilinks, DELL, HP, Apple</td>
-            <td>Anees Ahmad, Nouman Aslam, Haider Abbas, Mian Asim</td>
-            <td>Rs210-2200</td>
-            <td>Rs13635</td>
-            <td><span class="text-primary"><i class="fa fa-arrow-up"></i>12%</span> Rs1875</td>
-          </tr>
+          <?php
+
+            while ($row = mysqli_fetch_array($getProductTypesQuery)) {
+              $productTypeID = $row['id'];
+              $productTypeName = $row['type'];
+              $productTypeDesc = $row['description'];
+              $dateCreated = $row['date_created'];
+
+
+
+              $countProductsQuery = mysqli_query($appconnect, "SELECT * FROM `products` WHERE `type_id`='$productTypeID'");
+
+              if ($countProductsQuery) {
+
+                $totalProducts = mysqli_num_rows($countProductsQuery);
+
+
+              }else {
+                $totalProducts = 0;
+              }
+              ?>
+
+              <tr>
+                <td><?php echo $productTypeID; ?></td>
+                <td><?php echo $productTypeName; ?></td>
+                <td><?php echo $productTypeDesc; ?></td>
+                <td><?php echo $totalProducts; ?></td>
+                <td><?php echo $dateCreated; ?></td>
+                <td class="text-center"> <a href="edit-product-types?type=<?php echo $productTypeName; ?>">Edit</a> </td>
+              </tr>
+              <?php
+            }
+            ?>
         </tbody>
       </table>
     </div>
