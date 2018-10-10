@@ -56,6 +56,8 @@
       require (ABSPATH.APPINC.'/modules/modal-add-brand.php');
       require (ABSPATH.APPINC.'/modules/modal-add-vendor.php');
       require (ABSPATH.APPINC.'/modules/modal-add-expense-account.php');
+      require (ABSPATH.APPINC.'/modules/modal-add-expense.php');
+      require (ABSPATH.APPINC.'/modules/modal-query-status.php');
       include (ABSPATH.APPINC."/modules/footer-scripts.php");
     ?>
   </body>

@@ -17,7 +17,7 @@
               <div class="form-group">
                 <label>Account</label>
                 <select class="form-control text-primary" name="account_id" required>
-                  <option disabled selected><sub>Please select a product type</sub></option>
+                  <option disabled selected><sub>Please select an expense account</sub></option>
                   <?php
                     $res = mysqli_query($appconnect, "SELECT * FROM `expense_accounts`");
 

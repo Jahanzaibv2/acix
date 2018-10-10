@@ -65,7 +65,6 @@
       require (ABSPATH.APPINC.'/modules/modal-add-expense-account.php');
       require (ABSPATH.APPINC.'/modules/modal-add-expense.php');
       require (ABSPATH.APPINC.'/modules/modal-query-status.php');
-      require (ABSPATH.APPINC.'/modules/modal-add-product-with-diff-name.php');
       include (ABSPATH.APPINC."/modules/footer-scripts.php");
     ?>
   </body>

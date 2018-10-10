@@ -1,187 +1,104 @@
-<?php  ?>
+<?php
+  include include (ABSPATH.'/admin/scripts/get-payment-reports.php');
+?>
 <!-- Payment Reports Table -->
 <div class="card mb-3">
   <div class="card-header bg-primary text-white">
     <i class="fa fa-table"></i>
-    Payment Reports
-    <a href="#" class="text-white" data-toggle="modal" data-target="#addSaleModal">
-      <span class="float-right">
-        <i class="fa fa-plus"></i>
-        Add Expense
-      </span>
-    </a>
+    Payment Reports (Income/Expense Details)
   </div>
   <div class="card-body">
     <div class="table-responsive">
       <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
         <thead>
           <tr>
-            <th>TID</th>
-            <th>Transaction Type</th>
             <th>Description</th>
+            <th>Transaction Type</th>
             <th>Account</th>
+            <th>Amount</th>
             <th>Date</th>
-            <th>Price</th>
           </tr>
         </thead>
         <tfoot>
           <tr>
-            <th>TID</th>
-            <th>Transaction Type</th>
             <th>Description</th>
+            <th>Transaction Type</th>
             <th>Account</th>
+            <th>Amount</th>
             <th>Date</th>
-            <th>Price</th>
           </tr>
         </tfoot>
         <tbody>
-          <tr>
-            <td>#456421</td>
-            <td class="text-danger">Expense</td>
-            <td>Served 2 Fresh Juices</td>
-            <td>Akhtar Hotel</td>
-            <td>03/10/2018</td>
-            <td>Rs120</td>
-          </tr>
-          <tr>
-            <td>#456519</td>
-            <td class="text-danger">Expense</td>
-            <td>Served 4 Teas</td>
-            <td>Mian Tea Stall</td>
-            <td>03/10/2018</td>
-            <td>Rs80</td>
-          </tr>
-          <tr>
-            <td>#456517</td>
-            <td class="text-danger">Expense</td>
-            <td>Served 4 Teas</td>
-            <td>Mian Tea Stall</td>
-            <td>03/10/2018</td>
-            <td>Rs80</td>
-          </tr>
-          <tr>
-            <td>#456515</td>
-            <td class="text-danger">Expense</td>
-            <td>Served 4 Teas</td>
-            <td>Mian Tea Stall</td>
-            <td>03/10/2018</td>
-            <td>Rs80</td>
-          </tr>
-          <tr>
-            <td>#455314</td>
-            <td class="text-primary">Income</td>
-            <td>Audionic MAX-4 Sold out</td>
-            <td>Cash Register</td>
-            <td>04/10/2018</td>
-            <td>Rs2350</td>
-          </tr>
-          <tr>
-            <td>#456513</td>
-            <td class="text-danger">Expense</td>
-            <td>Served 4 Teas</td>
-            <td>Mian Tea Stall</td>
-            <td>03/10/2018</td>
-            <td>Rs80</td>
-          </tr>
-          <tr>
-            <td>#455312</td>
-            <td class="text-primary">Income</td>
-            <td>Audionic MAX-4 Sold out</td>
-            <td>Cash Register</td>
-            <td>04/10/2018</td>
-            <td>Rs2350</td>
-          </tr>
-          <tr>
-            <td>#456511</td>
-            <td class="text-danger">Expense</td>
-            <td>Served 4 Teas</td>
-            <td>Mian Tea Stall</td>
-            <td>03/10/2018</td>
-            <td>Rs80</td>
-          </tr>
-          <tr>
-            <td>#455310</td>
-            <td class="text-primary">Income</td>
-            <td>Audionic MAX-4 Sold out</td>
-            <td>Cash Register</td>
-            <td>04/10/2018</td>
-            <td>Rs2350</td>
-          </tr>
-          <tr>
-            <td>#456509</td>
-            <td class="text-danger">Expense</td>
-            <td>Served 4 Teas</td>
-            <td>Mian Tea Stall</td>
-            <td>03/10/2018</td>
-            <td>Rs80</td>
-          </tr>
-          <tr>
-            <td>#455308</td>
-            <td class="text-primary">Income</td>
-            <td>Audionic MAX-4 Sold out</td>
-            <td>Cash Register</td>
-            <td>04/10/2018</td>
-            <td>Rs2350</td>
-          </tr>
-          <tr>
-            <td>#456507</td>
-            <td class="text-danger">Expense</td>
-            <td>Served 4 Teas</td>
-            <td>Mian Tea Stall</td>
-            <td>03/10/2018</td>
-            <td>Rs80</td>
-          </tr>
-          <tr>
-            <td>#455306</td>
-            <td class="text-primary">Income</td>
-            <td>Audionic MAX-4 Sold out</td>
-            <td>Cash Register</td>
-            <td>04/10/2018</td>
-            <td>Rs2350</td>
-          </tr>
-          <tr>
-            <td>#456505</td>
-            <td class="text-danger">Expense</td>
-            <td>Served 4 Teas</td>
-            <td>Mian Tea Stall</td>
-            <td>03/10/2018</td>
-            <td>Rs80</td>
-          </tr>
-          <tr>
-            <td>#455304</td>
-            <td class="text-primary">Income</td>
-            <td>Audionic MAX-4 Sold out</td>
-            <td>Cash Register</td>
-            <td>04/10/2018</td>
-            <td>Rs2350</td>
-          </tr>
-          <tr>
-            <td>#456503</td>
-            <td class="text-danger">Expense</td>
-            <td>Served 4 Teas</td>
-            <td>Mian Tea Stall</td>
-            <td>03/10/2018</td>
-            <td>Rs80</td>
-          </tr>
-          <tr>
-            <td>#455302</td>
-            <td class="text-primary">Income</td>
-            <td>Audionic MAX-4 Sold out</td>
-            <td>Cash Register</td>
-            <td>04/10/2018</td>
-            <td>Rs2350</td>
-          </tr>
-          <tr>
-            <td>#456501</td>
-            <td class="text-danger">Expense</td>
-            <td>Served 4 Teas</td>
-            <td>Mian Tea Stall</td>
-            <td>03/10/2018</td>
-            <td>Rs80</td>
-          </tr>
+          <?php
+
+            while ($row = mysqli_fetch_array($getSalesQuery)) {
+              $salesID = $row['id'];
+              $productID = $row['product_id'];
+              $saleDesc = $row['description'];
+              $saleProfit = $row['profit'];
+              $saleDate  = $row['date_created'];
+
+
+
+              $productNameQuery = mysqli_query($appconnect, "SELECT * FROM `products` WHERE `id`='$productID'");
+
+              if ($productNameQuery) {
+                $row = mysqli_fetch_array($productNameQuery);
+                $productName = $row['name'];
+                $productPrice = $row['price'];
+                $saleDesc = "Sold $productName";
+
+                $amount = $productPrice + $saleProfit;
+              }else {
+                $productName = 'no products found for this sale';
+              }
+              ?>
+
+              <tr>
+                <td><?php echo $saleDesc; ?></td>
+                <td class="text-primary">Income</td>
+                <td>Store Account</td>
+                <td><?php echo (number_format($amount)); ?></td>
+                <td><?php echo $saleDate; ?></td>
+              </tr>
+              <?php
+            }
+
+
+
+              while ($row = mysqli_fetch_array($getExpensesQuery)) {
+                $expenseID = $row['id'];
+                $expenseAmount = $row['expense'];
+                $expenseAccountID = $row['expense_acc_id'];
+                $expenseDesc = $row['description'];
+                $expenseDate = $row['date_created'];
+
+
+                $expenseAccountQuery = mysqli_query($appconnect, "SELECT * FROM `expense_accounts` WHERE `id`='$expenseAccountID'");
+
+                if ($expenseAccountQuery) {
+                  $row = mysqli_fetch_array($expenseAccountQuery);
+                  $expenseAccount = $row['account_title'];
+                }else {
+                  $expenseAccount = 'no accounts found for this expense';
+                }
+                ?>
+
+                <tr>
+                  <td><?php echo $expenseDesc; ?></td>
+                  <td class="text-danger">Expense</td>
+                  <td><?php echo $expenseAccount; ?></td>
+                  <td><?php echo (number_format($expenseAmount)); ?></td>
+                  <td><?php echo $expenseDate; ?></td>
+                </tr>
+                <?php
+              }
+
+
+          ?>
         </tbody>
       </table>
     </div>
   </div>
-  <div class="card-footer small text-muted">This table shows last 100 Enteries. Check all other enteries <a href="#">here</a>.</div>
+  <div class="card-footer small text-muted"><?php echo $thisMonth; ?> | <a href="?month=<?php echo $prevMonth; ?>&year=2018"><?php echo $prevMonth; ?></a> | <a href="?year=2018">All 2018</a> </div>
 </div>
