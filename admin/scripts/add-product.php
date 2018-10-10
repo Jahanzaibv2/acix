@@ -11,8 +11,6 @@
     $paymentOption = mysqli_real_escape_string($appconnect, $_POST['payment_option']);
     $productDesc = mysqli_real_escape_string($appconnect, $_POST['product_desc']);
 
-    $thisMonth = date('F Y');
-    $prevMonth = date('F Y', strtotime("last month"));
 
     // Fetches data from `products` table
     $res = mysqli_query($appconnect, "SELECT * FROM `products` WHERE `name`='$productName'");
@@ -63,7 +61,7 @@
 
         // Checks if user wanted to deduct amount from the store account.
         if ($paymentOption == "store_account") {
-          $res = mysqli_query($appconnect, "SELECT * FROM `store_account` WHERE `month`='$thisMonth'");
+          $res = mysqli_query($appconnect, "SELECT * FROM `store_account` WHERE `month`='$thisMonth' AND `year`='$thisYear'");
 
           // Checks the availability of record for this month
           if ((mysqli_num_rows($res)) != 1) {
@@ -73,24 +71,26 @@
             mysqli_query($appconnect, "INSERT INTO `store_account` (
                         `id`,
                         `balance`,
-                        `month`,
                         `income`,
                         `expense`,
+                        `month`,
+                        `year`,
                         `date_created`,
                         `last_updated`
                       ) VALUES (
                         NULL,
                         '0',
+                        '0',
+                        '0',
                         '$thisMonth',
-                        '0',
-                        '0',
+                        '$thisYear',
                         current_timestamp(),
                         current_timestamp())"
                       );
 
 
             // Gets Data from previous month and updates balance for this month.
-            $pre = mysqli_query($appconnect, "SELECT * FROM `store_account` WHERE `month`='$prevMonth'");
+            $pre = mysqli_query($appconnect, "SELECT * FROM `store_account` WHERE `month`='$lastMonth' AND `year`='$thisYear'");
             $row = mysqli_fetch_array($pre);
 
             if ((mysqli_num_rows($pre))>0) {
@@ -103,7 +103,7 @@
                           `income` = '0',
                           `expense` = '0',
                           `last_updated` = current_timestamp()
-                          WHERE `store_account`.`month` = '$thisMonth'"
+                          WHERE `store_account`.`month` = '$thisMonth' AND `store_account`.`year` = '$thisYear'"
                         );
 
             }else {
@@ -123,7 +123,7 @@
             // Assumes that data for current month exists and proceeds with updating record
 
             // Fetches data for current month
-            $res = mysqli_query($appconnect, "SELECT * FROM `store_account` WHERE `month`='$thisMonth'");
+            $res = mysqli_query($appconnect, "SELECT * FROM `store_account` WHERE `month`='$thisMonth' AND `year`='$thisYear'");
             $row = mysqli_fetch_array($res);
             $balance = $row['balance'];
             $income = $row['income'];
@@ -139,7 +139,7 @@
                         `income` = '$income',
                         `expense` = '$newExpense',
                         `last_updated` = current_timestamp()
-                        WHERE `store_account`.`month` = '$thisMonth'"
+                        WHERE `store_account`.`month` = '$thisMonth' AND `store_account`.`year` = '$thisYear'"
                       );
           } // ends else statement
 

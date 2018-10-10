@@ -17,9 +17,6 @@
 
 
 
-    $thisMonth = date('F Y');
-    $prevMonth = date('F Y', strtotime("last month"));
-
     // Adding sales record
     $addSaleQuery = mysqli_query($appconnect, "INSERT INTO `sales` (
                                 `id`,
@@ -27,6 +24,7 @@
                                 `description`,
                                 `profit`,
                                 `month`,
+                                `year`,
                                 `date_created`
                               ) VALUES (
                                 NULL,
@@ -34,6 +32,7 @@
                                 '$saleDesc',
                                 '$saleProfit',
                                 '$thisMonth',
+                                '$thisYear',
                                 current_timestamp())"
                               );
 
@@ -67,24 +66,26 @@
           mysqli_query($appconnect, "INSERT INTO `store_account` (
                       `id`,
                       `balance`,
-                      `month`,
                       `income`,
                       `expense`,
+                      `month`,
+                      `year`,
                       `date_created`,
                       `last_updated`
                     ) VALUES (
                       NULL,
                       '0',
+                      '0',
+                      '0',
                       '$thisMonth',
-                      '0',
-                      '0',
+                      '$thisYear',
                       current_timestamp(),
                       current_timestamp())"
                     );
 
 
     // Gets Data from previous month and updates balance for this month.
-    $pre = mysqli_query($appconnect, "SELECT * FROM `store_account` WHERE `month`='$prevMonth'");
+    $pre = mysqli_query($appconnect, "SELECT * FROM `store_account` WHERE `month`='$lastMonth' AND  `year`='$thisYear'");
     $row = mysqli_fetch_array($pre);
 
         if ((mysqli_num_rows($pre))>0) {
@@ -97,19 +98,19 @@
                       `income` = '0',
                       `expense` = '0',
                       `last_updated` = current_timestamp()
-                      WHERE `store_account`.`month` = '$thisMonth'"
+                      WHERE `store_account`.`month` = '$thisMonth' AND `store_account`.`year` = '$thisYear'"
                     );
 
           // Fetches data from store account for current month
-          $res = mysqli_query($appconnect, "SELECT * FROM `store_account` WHERE `month`='$thisMonth'");
+          $res = mysqli_query($appconnect, "SELECT * FROM `store_account` WHERE `month`='$thisMonth' AND `year`='$thisYear'");
           $row = mysqli_fetch_array($res);
           $balance = $row['balance'];
           $thatIncome = $row['income'];
           $expense = $row['expense'];
 
           // Sets updated data
-          $newBalance = $balance + $productPrice;
-          $income = $thatIncome + $productPrice;
+          $newBalance = $balance + $salePrice;
+          $income = $thatIncome + $salePrice;
 
           // Updates data for current month
           mysqli_query($appconnect, "UPDATE `store_account` SET
@@ -117,7 +118,7 @@
                       `income` = '$income',
                       `expense` = '$expense',
                       `last_updated` = current_timestamp()
-                      WHERE `store_account`.`month` = '$thisMonth'"
+                      WHERE `store_account`.`month` = '$thisMonth' AND `store_account`.`year` = '$thisYear'"
                     );
 
         }else {
@@ -127,15 +128,15 @@
            */
 
           // Fetches data from store account for current month
-          $res = mysqli_query($appconnect, "SELECT * FROM `store_account` WHERE `month`='$thisMonth'");
+          $res = mysqli_query($appconnect, "SELECT * FROM `store_account` WHERE `month`='$thisMonth' AND `year`='$thisYear'");
           $row = mysqli_fetch_array($res);
           $balance = $row['balance'];
           $thatIncome = $row['income'];
           $expense = $row['expense'];
 
           // Sets updated data
-          $newBalance = $balance + $productPrice;
-          $income = $thatIncome + $productPrice;
+          $newBalance = $balance + $salePrice;
+          $income = $thatIncome + $salePrice;
 
           // Updates data for current month
           mysqli_query($appconnect, "UPDATE `store_account` SET
@@ -143,7 +144,7 @@
                       `income` = '$income',
                       `expense` = '$expense',
                       `last_updated` = current_timestamp()
-                      WHERE `store_account`.`month` = '$thisMonth'"
+                      WHERE `store_account`.`month` = '$thisMonth' AND `store_account`.`year` = '$thisYear'"
                     );
         }
 
@@ -152,15 +153,15 @@
 
 
       // Fetches data from store account for current month
-      $res = mysqli_query($appconnect, "SELECT * FROM `store_account` WHERE `month`='$thisMonth'");
+      $res = mysqli_query($appconnect, "SELECT * FROM `store_account` WHERE `month`='$thisMonth' AND `year`='$thisYear'");
       $row = mysqli_fetch_array($res);
       $balance = $row['balance'];
       $thatIncome = $row['income'];
       $expense = $row['expense'];
 
       // Sets updated data
-      $newBalance = $balance + $productPrice;
-      $income = $thatIncome + $productPrice;
+      $newBalance = $balance + $salePrice;
+      $income = $thatIncome + $salePrice;
 
       // Updates data for current month
       mysqli_query($appconnect, "UPDATE `store_account` SET
@@ -168,7 +169,7 @@
                   `income` = '$income',
                   `expense` = '$expense',
                   `last_updated` = current_timestamp()
-                  WHERE `store_account`.`month` = '$thisMonth'"
+                  WHERE `store_account`.`month` = '$thisMonth' AND `store_account`.`year` = '$thisYear'"
                 );
     } // ends else statement
 

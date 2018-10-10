@@ -6,6 +6,8 @@ if (!defined('ABSPATH')) {
 
   define('APPINC', 'app-includes');
 
+  require (ABSPATH.'/admin/time.php');
+
   include (ABSPATH.'/admin/app-config.php');
   include (ABSPATH.'/admin/plot-database.php');
 

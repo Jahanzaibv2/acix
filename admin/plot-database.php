@@ -30,6 +30,7 @@
                                         `description` VARCHAR(255) NULL ,
                                         `profit` INT NOT NULL ,
                                         `month` VARCHAR(255) NOT NULL,
+                                        `year` INT NOT NULL,
                                         `date_created` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP ,
                                         PRIMARY KEY (`id`))"
                                       );
@@ -85,9 +86,10 @@
     $store_account = mysqli_query($appconnect, "CREATE TABLE IF NOT EXISTS `acix`.`store_account` (
                                                 `id` INT NOT NULL AUTO_INCREMENT ,
                                                 `balance` INT NOT NULL ,
-                                                `month` VARCHAR(255) NOT NULL ,
                                                 `income` INT NOT NULL DEFAULT '0' ,
                                                 `expense` INT NOT NULL DEFAULT '0' ,
+                                                `month` VARCHAR(255) NOT NULL ,
+                                                `year` INT NOT NULL,
                                                 `date_created` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP ,
                                                 `last_updated` TIMESTAMP NULL ,
                                                 PRIMARY KEY (`id`) , UNIQUE (`month`))"
@@ -100,6 +102,7 @@
                                            `expense_acc_id` INT NOT NULL ,
                                            `description` VARCHAR(255) NOT NULL ,
                                            `month` VARCHAR(255) NOT NULL,
+                                           `year` INT NOT NULL,
                                            `date_created` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP ,
                                            PRIMARY KEY (`id`))"
                                          );

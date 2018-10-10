@@ -6,15 +6,13 @@
     $expenseDesc = mysqli_real_escape_string($appconnect, $_POST['expense_desc']);
 
 
-    $thisMonth = date('F Y');
-    $prevMonth = date('F Y', strtotime("last month"));
-
     $addExpenseQuery = mysqli_query($appconnect, "INSERT INTO `expenses` (
                               `id`,
                               `expense`,
                               `expense_acc_id`,
                               `description`,
                               `month`,
+                              `year`,
                               `date_created`
                             ) VALUES (
                               NULL,
@@ -22,13 +20,14 @@
                               '$accountID',
                               '$expenseDesc',
                               '$thisMonth',
+                              '$thisYear',
                               current_timestamp())"
                             );
     if ($addExpenseQuery) {
       // Expense added. Proceeds with deducting amount from the store account
 
       // Fetches data for current month
-      $res = mysqli_query($appconnect, "SELECT * FROM `store_account` WHERE `month`='$thisMonth'");
+      $res = mysqli_query($appconnect, "SELECT * FROM `store_account` WHERE `month`='$thisMonth' AND `year`='$thisYear'");
       $row = mysqli_fetch_array($res);
       $balance = $row['balance'];
       $income = $row['income'];
@@ -44,38 +43,40 @@
                   `income` = '$income',
                   `expense` = '$newExpense',
                   `last_updated` = current_timestamp()
-                  WHERE `store_account`.`month` = '$thisMonth'"
+                  WHERE `store_account`.`month` = '$thisMonth' AND `store_account`.`year` = '$thisYear'"
                 );
 
 
       // Checks the availability of record for this month
-      if ((mysqli_num_rows($res)) != 1) {
+      $res = mysqli_query($appconnect, "SELECT * FROM `store_account` WHERE `month`='$thisMonth' AND `year`='$thisYear'");
+      if ((mysqli_num_rows($res)) < 1) {
 
-        $res = mysqli_query($appconnect, "SELECT * FROM `store_account` WHERE `month`='$thisMonth'");
 
         // Creates record if not exists. This query helps creating new table data for new month
 
         mysqli_query($appconnect, "INSERT INTO `store_account` (
                     `id`,
                     `balance`,
-                    `month`,
                     `income`,
                     `expense`,
+                    `month`,
+                    `year`,
                     `date_created`,
                     `last_updated`
                   ) VALUES (
                     NULL,
                     '0',
+                    '0',
+                    '0',
                     '$thisMonth',
-                    '0',
-                    '0',
+                    '$thisYear',
                     current_timestamp(),
                     current_timestamp())"
                   );
 
 
         // Gets Data from previous month and updates balance for this month.
-        $pre = mysqli_query($appconnect, "SELECT * FROM `store_account` WHERE `month`='$prevMonth'");
+        $pre = mysqli_query($appconnect, "SELECT * FROM `store_account` WHERE `month`='$lastMonth' AND `year`='$thisYear'");
         $row = mysqli_fetch_array($pre);
 
         if ((mysqli_num_rows($pre))>0) {
@@ -88,7 +89,7 @@
                       `income` = '0',
                       `expense` = '0',
                       `last_updated` = current_timestamp()
-                      WHERE `store_account`.`month` = '$thisMonth'"
+                      WHERE `store_account`.`month` = '$thisMonth' AND `store_account`.`year` = '$thisYear'"
                     );
 
         }else {
@@ -106,7 +107,7 @@
           // NOTE: This does add expense even store balance is zero
 
           // Fetches data from store account for current month
-          $res = mysqli_query($appconnect, "SELECT * FROM `store_account` WHERE `month`='$thisMonth'");
+          $res = mysqli_query($appconnect, "SELECT * FROM `store_account` WHERE `month`='$thisMonth' AND `year`='$thisYear'");
           $row = mysqli_fetch_array($res);
           $balance = $row['balance'];
           $income = $row['income'];
@@ -121,7 +122,7 @@
                       `income` = '$income',
                       `expense` = '$newExpense',
                       `last_updated` = current_timestamp()
-                      WHERE `store_account`.`month` = '$thisMonth'"
+                      WHERE `store_account`.`month` = '$thisMonth' AND `store_account`.`year` = '$thisYear'"
                     );
         }
 
