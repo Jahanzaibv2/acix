@@ -1,5 +1,5 @@
 <?php
-  include (ABSPATH.'/admin/scripts/get-products.php');
+  include (ABSPATH.'/admin/scripts/get-brands.php');
 ?>
 <!-- Brands Table -->
 <div class="card mb-3">
