@@ -390,3 +390,7 @@ body.sidebar-toggled footer.sticky-footer {
   background-color: white;
   cursor: pointer !important;
 }
+
+.no-border {
+  border: 0px solid white !important;
+}
