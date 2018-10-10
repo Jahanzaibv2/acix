@@ -1,4 +1,6 @@
-<?php  ?>
+<?php
+  include (ABSPATH.'/admin/scripts/get-accounts.php');
+?>
           <!-- Accounts Data Table -->
           <div class="card mb-3">
             <div class="card-header bg-primary text-white">
@@ -18,126 +20,60 @@
                     <tr>
                       <th>Acc#</th>
                       <th>Account Title</th>
-                      <th>Amount</th>
+                      <th>Description</th>
+                      <th>Expenses</th>
                       <th>Transactions Made</th>
-                      <th>Last updated</th>
+                      <th>Date Created</th>
+                      <th>Action</th>
                     </tr>
                   </thead>
                   <tfoot>
                     <tr>
                       <th>Acc#</th>
                       <th>Account Title</th>
-                      <th>Amount</th>
+                      <th>Description</th>
+                      <th>Expenses</th>
                       <th>Transactions Made</th>
-                      <th>Last updated</th>
+                      <th>Date Created</th>
+                      <th>Action</th>
                     </tr>
                   </tfoot>
                   <tbody>
-                    <tr>
-                      <td>9989846565546</td>
-                      <td>Akhtar Hotel</td>
-                      <td>Rs680</td>
-                      <td>9</td>
-                      <td>06/10/2018</td>
-                    </tr>
-                    <tr>
-                      <td>9989846565546</td>
-                      <td>Akhtar Hotel</td>
-                      <td>Rs680</td>
-                      <td>9</td>
-                      <td>06/10/2018</td>
-                    </tr>
-                    <tr>
-                      <td>9989846565546</td>
-                      <td>Akhtar Hotel</td>
-                      <td>Rs680</td>
-                      <td>9</td>
-                      <td>06/10/2018</td>
-                    </tr>
-                    <tr>
-                      <td>9989846565546</td>
-                      <td>Akhtar Hotel</td>
-                      <td>Rs680</td>
-                      <td>9</td>
-                      <td>06/10/2018</td>
-                    </tr>
-                    <tr>
-                      <td>9989846565546</td>
-                      <td>Akhtar Hotel</td>
-                      <td>Rs680</td>
-                      <td>9</td>
-                      <td>06/10/2018</td>
-                    </tr>
-                    <tr>
-                      <td>9989846565546</td>
-                      <td>Akhtar Hotel</td>
-                      <td>Rs680</td>
-                      <td>9</td>
-                      <td>06/10/2018</td>
-                    </tr>
-                    <tr>
-                      <td>9989846565546</td>
-                      <td>Akhtar Hotel</td>
-                      <td>Rs680</td>
-                      <td>9</td>
-                      <td>06/10/2018</td>
-                    </tr>
-                    <tr>
-                      <td>9989846565546</td>
-                      <td>Akhtar Hotel</td>
-                      <td>Rs680</td>
-                      <td>9</td>
-                      <td>06/10/2018</td>
-                    </tr>
-                    <tr>
-                      <td>9989846565546</td>
-                      <td>Akhtar Hotel</td>
-                      <td>Rs680</td>
-                      <td>9</td>
-                      <td>06/10/2018</td>
-                    </tr>
-                    <tr>
-                      <td>9989846565546</td>
-                      <td>Akhtar Hotel</td>
-                      <td>Rs680</td>
-                      <td>9</td>
-                      <td>06/10/2018</td>
-                    </tr>
-                    <tr>
-                      <td>9989846565546</td>
-                      <td>Akhtar Hotel</td>
-                      <td>Rs680</td>
-                      <td>9</td>
-                      <td>06/10/2018</td>
-                    </tr>
-                    <tr>
-                      <td>9989846565546</td>
-                      <td>Akhtar Hotel</td>
-                      <td>Rs680</td>
-                      <td>9</td>
-                      <td>06/10/2018</td>
-                    </tr>
-                    <tr>
-                      <td>9989846565546</td>
-                      <td>Akhtar Hotel</td>
-                      <td>Rs680</td>
-                      <td>9</td>
-                      <td>06/10/2018</td>
-                    </tr>
-                    <tr>
-                      <td>9989846565546</td>
-                      <td>Akhtar Hotel</td>
-                      <td>Rs680</td>
-                      <td>9</td>
-                      <td>06/10/2018</td>
-                    </tr>
-                    <tr>
-                      <td>9989846565546</td>
-                      <td>Akhtar Hotel</td>
-                      <td>Rs680</td>
-                      <td>9</td>
-                      <td>06/10/2018</td>
-                    </tr>
+                    <?php
+                      while ($row = mysqli_fetch_array($res)) {
+                        $accountID = $row['id'];
+                        $accountTitle = $row['account_title'];
+                        $accountDesc = $row['description'];
+                        $dateCreated = $row['date_created'];
+
+                        $getExpensesQuery = mysqli_query($appconnect, "SELECT * FROM `expenses` WHERE `expense_acc_id`='$accountID' AND `month`='$thisMonth' AND `year`='$thisYear'");
+
+                        $expenses = 0;
+                        if ($getExpensesQuery) {
+                          while ($row = mysqli_fetch_array($getExpensesQuery)) {
+                            $transactionsMade = mysqli_num_rows($getExpensesQuery);
+                            $expense = $row['expense'];
+                            $totalExpenses +=$expense;
+                          }
+                        }else {
+                          $expenses = 0;
+                        }
+
+                        ?>
+
+                        <tr>
+                          <td><?php echo $accountID; ?></td>
+                          <td><?php echo $accountTitle; ?></td>
+                          <td><?php echo $accountDesc; ?></td>
+                          <td>Rs<?php echo (number_format($totalExpenses)); ?></td>
+                          <td><?php echo $transactionsMade; ?></td>
+                          <td><?php echo $dateCreated; ?></td>
+                          <td class="text-center"> <a href="edit-accounts.php?account=<?php echo $accountTitle; ?>">Edit</a> </td>
+                        </tr>
+                        <?php
+                      }
+
+                    ?>
                   </tbody>
                 </table>
               </div>
