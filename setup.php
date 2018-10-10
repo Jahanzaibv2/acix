@@ -10,7 +10,7 @@
 ?>
 <!DOCTYPE html>
 <html lang="en">
-  <?php require (ABSPATH.APPINC."/page-unit/head.php"); ?>
+  <?php require (ABSPATH.APPINC."/modules/head.php"); ?>
   <body class="bg-dark">
     <div class="container">
       <div class="card card-register mx-auto mt-5">
@@ -105,7 +105,7 @@
       </div>
     </div>
     <?php
-      include (ABSPATH.APPINC."/page-unit/footer-scripts.php");
+      include (ABSPATH.APPINC."/modules/footer-scripts.php");
     ?>
  </body>
 </html>

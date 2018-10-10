@@ -20,15 +20,15 @@
     require (ABSPATH.'/admin/scripts/add-brand.php');
     require (ABSPATH.'/admin/scripts/add-expense-account.php');
     require (ABSPATH.'/admin/scripts/add-expense.php');
-    require (ABSPATH.APPINC."/page-unit/head.php");
+    require (ABSPATH.APPINC."/modules/head.php");
   ?>
   <body id="page-top">
-    <?php require (ABSPATH.APPINC."/page-unit/nav.php"); ?>
+    <?php require (ABSPATH.APPINC."/modules/nav.php"); ?>
     <div id="wrapper">
-      <?php require (ABSPATH.APPINC."/page-unit/sidebar.php"); ?>
+      <?php require (ABSPATH.APPINC."/modules/sidebar.php"); ?>
       <div id="content-wrapper">
         <div class="container-fluid">
-          <?php require (ABSPATH.APPINC."/page-unit/breadcrumbs.php"); ?>
+          <?php require (ABSPATH.APPINC."/modules/breadcrumbs.php"); ?>
           <div class="row text-center">
             <div class="col-md-12 text-center mb-3">
               <span class=""><?php echo $ADD_ERROR_MSG; ?></span>
@@ -51,22 +51,22 @@
           <?php require (ABSPATH.APPINC."/charts/demo-area-chart.php"); ?>
         </div>
         <br><br><br>
-        <?php require (ABSPATH.APPINC.'/page-unit/footer.php'); ?>
+        <?php require (ABSPATH.APPINC.'/modules/footer.php'); ?>
       </div>
     </div>
     <?php
-      include (ABSPATH.APPINC.'/page-unit/scroll-to-top.php');
-      require (ABSPATH.APPINC.'/page-unit/modal-logout.php');
-      require (ABSPATH.APPINC.'/page-unit/modal-add-sale.php');
-      require (ABSPATH.APPINC.'/page-unit/modal-add-product.php');
-      require (ABSPATH.APPINC.'/page-unit/modal-add-product-type.php');
-      require (ABSPATH.APPINC.'/page-unit/modal-add-brand.php');
-      require (ABSPATH.APPINC.'/page-unit/modal-add-vendor.php');
-      require (ABSPATH.APPINC.'/page-unit/modal-add-expense-account.php');
-      require (ABSPATH.APPINC.'/page-unit/modal-add-expense.php');
-      require (ABSPATH.APPINC.'/page-unit/modal-query-status.php');
-      require (ABSPATH.APPINC.'/page-unit/modal-add-product-with-diff-name.php');
-      include (ABSPATH.APPINC."/page-unit/footer-scripts.php");
+      include (ABSPATH.APPINC.'/modules/scroll-to-top.php');
+      require (ABSPATH.APPINC.'/modules/modal-logout.php');
+      require (ABSPATH.APPINC.'/modules/modal-add-sale.php');
+      require (ABSPATH.APPINC.'/modules/modal-add-product.php');
+      require (ABSPATH.APPINC.'/modules/modal-add-product-type.php');
+      require (ABSPATH.APPINC.'/modules/modal-add-brand.php');
+      require (ABSPATH.APPINC.'/modules/modal-add-vendor.php');
+      require (ABSPATH.APPINC.'/modules/modal-add-expense-account.php');
+      require (ABSPATH.APPINC.'/modules/modal-add-expense.php');
+      require (ABSPATH.APPINC.'/modules/modal-query-status.php');
+      require (ABSPATH.APPINC.'/modules/modal-add-product-with-diff-name.php');
+      include (ABSPATH.APPINC."/modules/footer-scripts.php");
     ?>
   </body>
 </html>
