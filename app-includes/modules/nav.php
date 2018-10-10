@@ -51,16 +51,17 @@
         </li>
         <li class="nav-item dropdown no-arrow ml-3">
           <a class="nav-link dropdown-toggle" href="#" id="alertsDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            <span class="badge badge-warning">9+</span>
+            <span class="badge badge-warning"></span>
             <i class="fa fa-fw fa-bell"></i>
           </a>
-          <div class="dropdown-menu dropdown-menu-right" aria-labelledby="alertsDropdown">
+          <div class="dropdown-menu dropdown-menu-right" aria-labelledby="alertsDropdown"><!--
             <a class="dropdown-item text-danger no-text-decorations" href="#"> <i class="fa fa-info-circle"></i> You've few blocked products</a>
             <a class="dropdown-item text-danger no-text-decorations" href="#"> <i class="fa fa-info-circle"></i> Another new notification</a>
             <a class="dropdown-item text-danger no-text-decorations" href="#"> <i class="fa fa-info-circle"></i> Another new notification</a>
             <a class="dropdown-item text-danger no-text-decorations" href="#"> <i class="fa fa-info-circle"></i> Another new notification</a>
             <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="notifications.php">See more notifications</a>
+            <a class="dropdown-item" href="notifications.php">See more notifications</a> -->
+            <a class="dropdown-item" >Nothing to show here, all clear.</a>
           </div>
         </li>
         <li class="nav-item dropdown no-arrow ml-3">
