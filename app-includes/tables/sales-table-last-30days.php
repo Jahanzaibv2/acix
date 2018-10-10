@@ -1,5 +1,5 @@
 <?php
-  include include (ABSPATH.'/admin/scripts/get-sales.php');
+  include (ABSPATH.'/admin/scripts/get-sales.php');
 ?>
 <!-- Sales Records Table : Last 30 Days -->
 <div class="card mb-3">

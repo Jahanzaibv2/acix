@@ -1,4 +1,6 @@
-<?php  ?>
+<?php
+  include (ABSPATH.'/admin/scripts/get-products.php');
+?>
 <!-- Brands Table -->
 <div class="card mb-3">
   <div class="card-header bg-primary text-white">

@@ -1,5 +1,5 @@
 <?php
-  include include (ABSPATH.'/admin/scripts/get-inventory-reports.php');
+  include (ABSPATH.'/admin/scripts/get-inventory-reports.php');
 ?>
 <!-- Inventory Reports Table -->
 <div class="card mb-3">

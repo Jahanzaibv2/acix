@@ -1,5 +1,5 @@
 <?php
-  include include (ABSPATH.'/admin/scripts/get-payment-reports.php');
+  include (ABSPATH.'/admin/scripts/get-payment-reports.php');
 ?>
 <!-- Payment Reports Table -->
 <div class="card mb-3">

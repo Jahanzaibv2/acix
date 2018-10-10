@@ -1,5 +1,5 @@
 <?php
-  include include (ABSPATH.'/admin/scripts/get-vendors.php');
+  include (ABSPATH.'/admin/scripts/get-vendors.php');
 ?>
 <!-- Vendors Table -->
 <div class="card mb-3">
