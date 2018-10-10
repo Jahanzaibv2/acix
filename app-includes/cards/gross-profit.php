@@ -4,10 +4,10 @@
 
 ?>
   <div class="card o-hidden h-100">
-    <div class="card-header bg-primary text-white">
+    <div class="card-header bg-warning text-white">
       <h1>Gross Profit</h1>
     </div>
-    <div class="card-body">
+    <div class="card-body bg-warning text-white">
       <div class="card-body-icon text-white">
         <i class="fa fa-fw fa-shopping-cart"></i>
       </div>
@@ -18,7 +18,7 @@
         -->
       </div>
     </div>
-    <a class="card-footer clearfix small z-1" href="gross-profit.php">
+    <a class="card-footer clearfix small z-1 bg-warning text-white" href="gross-profit.php">
       <span class="float-left">View Details</span>
       <span class="float-right">
         <i class="fa fa-angle-right"></i>

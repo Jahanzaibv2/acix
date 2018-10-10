@@ -32,7 +32,7 @@
               <?php require (ABSPATH.APPINC."/cards/income.php"); ?>
             </div>
             <div class="col-md-6 col-sm-12 col-xs-12 mb-3">
-              <?php require (ABSPATH.APPINC."/cards/sales-count.php"); ?>
+              <?php require (ABSPATH.APPINC."/cards/expense.php"); ?>
             </div>
           </div>
           <div class="row">
