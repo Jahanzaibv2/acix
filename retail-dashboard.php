@@ -20,7 +20,7 @@
           <?php require (ABSPATH.APPINC."/page-unit/breadcrumbs.php"); ?>
           <div class="row">
             <div class="col-xl-6 col-sm-12 mb-3">
-              <?php require (ABSPATH.APPINC."/cards/revenue.php"); ?>
+              <?php require (ABSPATH.APPINC."/cards/income.php"); ?>
             </div>
             <div class="col-md-6 col-sm-12 col-xs-12 mb-3">
               <?php require (ABSPATH.APPINC."/cards/sales-count.php"); ?>
