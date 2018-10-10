@@ -1,5 +1,14 @@
 <?php
 
+  header('location: /');
+  exit;
+
+  //////////////////////////////////////////////
+  //
+  // Discarding History Records, for now
+  //
+  /////////////////////////////////////////////
+
   require ('load.php');
 
 
