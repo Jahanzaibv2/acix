@@ -25,9 +25,22 @@
                       $product_id = $row['id'];
                       $product_name = $row['name'];
                       $product_price = $row['price'];
+                      $stockValue =   $row['stock'];
                       ?>
-                      <option value="<?php echo $product_id; ?>"><?php echo $product_name; ?></option>
+                      <option value="<?php echo $product_id; ?>"
                       <?php
+                        if ($stockValue<=3) {
+                          echo 'disabled';
+                        }
+                      ?>>
+                      <?php
+                        echo $product_name;
+                        if ($stockValue<=3) {
+                          echo " (Out of Stock)";
+                        }
+                      ?>
+                      </option>
+                  <?php
                     }
                   ?>
                 </select>
