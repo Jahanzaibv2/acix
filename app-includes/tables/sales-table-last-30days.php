@@ -1,4 +1,6 @@
-<?php  ?>
+<?php
+  include include (ABSPATH.'/admin/scripts/get-sales.php');;
+?>
 <!-- Sales Records Table : Last 30 Days -->
 <div class="card mb-3">
   <div class="card-header bg-primary text-white">
@@ -16,193 +18,57 @@
       <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
         <thead>
           <tr>
-            <th>INVOICE-ID</th>
             <th>Product</th>
+            <th>Description</th>
             <th>In-Stock</th>
             <th>Price</th>
-            <th>Date</th>
             <th>Profit</th>
+            <th>Date</th>
           </tr>
         </thead>
         <tfoot>
           <tr>
-            <th>INVOICE-ID</th>
             <th>Product</th>
+            <th>Description</th>
             <th>In-Stock</th>
             <th>Price</th>
-            <th>Date</th>
             <th>Profit</th>
+            <th>Date</th>
           </tr>
         </tfoot>
         <tbody>
-          <tr>
-            <td>#456488</td>
-            <td>Audionic MIC AM-20</td>
-            <td class="text-danger">03</td>
-            <td>Rs2100</td>
-            <td>04/10/2018</td>
-            <td class="text-primary">Rs80</td>
-          </tr>
-          <tr>
-            <td>#451188</td>
-            <td>USB Audio Controller</td>
-            <td class="text-primary">12</td>
-            <td>Rs200</td>
-            <td>04/10/2018</td>
-            <td class="text-primary">Rs25</td>
-          </tr>
-          <tr>
-            <td>#456488</td>
-            <td>Audionic MIC AM-20</td>
-            <td class="text-danger">03</td>
-            <td>Rs2100</td>
-            <td>04/10/2018</td>
-            <td class="text-primary">Rs80</td>
-          </tr>
-          <tr>
-            <td>#456488</td>
-            <td>Audionic MIC AM-20</td>
-            <td class="text-danger">03</td>
-            <td>Rs2100</td>
-            <td>04/10/2018</td>
-            <td class="text-primary">Rs80</td>
-          </tr>
-          <tr>
-            <td>#456488</td>
-            <td>Audionic MIC AM-20</td>
-            <td class="text-danger">03</td>
-            <td>Rs2100</td>
-            <td>04/10/2018</td>
-            <td class="text-primary">Rs80</td>
-          </tr>
-          <tr>
-            <td>#456488</td>
-            <td>Audionic MIC AM-20</td>
-            <td class="text-danger">03</td>
-            <td>Rs2100</td>
-            <td>04/10/2018</td>
-            <td class="text-primary">Rs80</td>
-          </tr>
-          <tr>
-            <td>#456488</td>
-            <td>Audionic MIC AM-20</td>
-            <td class="text-danger">03</td>
-            <td>Rs2100</td>
-            <td>04/10/2018</td>
-            <td class="text-primary">Rs80</td>
-          </tr>
-          <tr>
-            <td>#456488</td>
-            <td>Audionic MIC AM-20</td>
-            <td class="text-danger">03</td>
-            <td>Rs2100</td>
-            <td>04/10/2018</td>
-            <td class="text-primary">Rs80</td>
-          </tr>
-          <tr>
-            <td>#456488</td>
-            <td>Audionic MIC AM-20</td>
-            <td class="text-danger">03</td>
-            <td>Rs2100</td>
-            <td>04/10/2018</td>
-            <td class="text-primary">Rs80</td>
-          </tr>
-          <tr>
-            <td>#456488</td>
-            <td>Audionic MIC AM-20</td>
-            <td class="text-danger">03</td>
-            <td>Rs2100</td>
-            <td>04/10/2018</td>
-            <td class="text-primary">Rs80</td>
-          </tr>
-          <tr>
-            <td>#456488</td>
-            <td>Audionic MIC AM-20</td>
-            <td class="text-danger">03</td>
-            <td>Rs2100</td>
-            <td>04/10/2018</td>
-            <td class="text-primary">Rs80</td>
-          </tr>
-          <tr>
-            <td>#456488</td>
-            <td>Audionic MIC AM-20</td>
-            <td class="text-danger">03</td>
-            <td>Rs2100</td>
-            <td>04/10/2018</td>
-            <td class="text-primary">Rs80</td>
-          </tr>
-          <tr>
-            <td>#456488</td>
-            <td>Audionic MIC AM-20</td>
-            <td class="text-danger">03</td>
-            <td>Rs2100</td>
-            <td>04/10/2018</td>
-            <td class="text-primary">Rs80</td>
-          </tr>
-          <tr>
-            <td>#456488</td>
-            <td>Audionic MIC AM-20</td>
-            <td class="text-danger">03</td>
-            <td>Rs2100</td>
-            <td>04/10/2018</td>
-            <td class="text-primary">Rs80</td>
-          </tr>
-          <tr>
-            <td>#456488</td>
-            <td>Audionic MIC AM-20</td>
-            <td class="text-danger">03</td>
-            <td>Rs2100</td>
-            <td>04/10/2018</td>
-            <td class="text-primary">Rs80</td>
-          </tr>
-          <tr>
-            <td>#456488</td>
-            <td>Audionic MIC AM-20</td>
-            <td class="text-danger">03</td>
-            <td>Rs2100</td>
-            <td>04/10/2018</td>
-            <td class="text-primary">Rs80</td>
-          </tr>
-          <tr>
-            <td>#456488</td>
-            <td>Audionic MIC AM-20</td>
-            <td class="text-danger">03</td>
-            <td>Rs2100</td>
-            <td>04/10/2018</td>
-            <td class="text-primary">Rs80</td>
-          </tr>
-          <tr>
-            <td>#456488</td>
-            <td>Audionic MIC AM-20</td>
-            <td class="text-danger">03</td>
-            <td>Rs2100</td>
-            <td>04/10/2018</td>
-            <td class="text-primary">Rs80</td>
-          </tr>
-          <tr>
-            <td>#456488</td>
-            <td>Audionic MIC AM-20</td>
-            <td class="text-danger">03</td>
-            <td>Rs2100</td>
-            <td>04/10/2018</td>
-            <td class="text-primary">Rs80</td>
-          </tr>
-          <tr>
-            <td>#456488</td>
-            <td>Audionic MIC AM-20</td>
-            <td class="text-danger">03</td>
-            <td>Rs2100</td>
-            <td>04/10/2018</td>
-            <td class="text-primary">Rs80</td>
-          </tr>
-          <tr>
-            <td>#456488</td>
-            <td>Audionic MIC AM-20</td>
-            <td class="text-danger">03</td>
-            <td>Rs2100</td>
-            <td>04/10/2018</td>
-            <td class="text-primary">Rs80</td>
-          </tr>
+          <?php
+            while ($row = mysqli_fetch_array($res)) {
+              $invoiceID = $row['id'];
+              $productID = $row['product_id'];
+              $saleDesc = $row['description'];
+              $saleProfit = $row['profit'];
+              $saleDate       = $row['date_created'];
+
+              $productNameQuery = mysqli_query($appconnect, "SELECT * FROM `products` WHERE `id`='$productID'");
+
+              if ($productNameQuery) {
+                $row = mysqli_fetch_array($productNameQuery);
+                $productName = $row['name'];
+                $stockValue = $row['stock'];
+                $productPrice      = $row['price'];
+              }else {
+                $productName = 'no product record found';
+              }
+              ?>
+
+              <tr>
+                <td><?php echo $productName; ?></td>
+                <td><?php echo $saleDesc; ?></td>
+                <td class="<?php if ($stockValue <= 3) { echo 'text-danger'; }else { echo 'text-primary'; } ?>"><?php echo $stockValue; ?></td>
+                <td>Rs<?php echo $productPrice;  ?></td>
+                <td class="text-primary">Rs<?php echo $saleProfit  ?></td>
+                <td><?php echo $saleDate; ?></td>
+              </tr>
+              <?php
+            }
+
+          ?>
         </tbody>
       </table>
     </div>

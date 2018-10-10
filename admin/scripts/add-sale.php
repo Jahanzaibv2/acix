@@ -38,7 +38,6 @@
                               );
 
     if ($addSaleQuery) {
-
       // Expense added. Proceeds with deducting amount from the store account
 
       //Fetches data from products, and updates stock
