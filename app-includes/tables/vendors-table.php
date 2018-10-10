@@ -1,4 +1,6 @@
-<?php  ?>
+<?php
+  include include (ABSPATH.'/admin/scripts/get-vendors.php');
+?>
 <!-- Vendors Table -->
 <div class="card mb-3">
   <div class="card-header bg-primary text-white">
@@ -18,86 +20,49 @@
           <tr>
             <th>Vendor ID</th>
             <th>Vendor Name</th>
+            <th>Description</th>
             <th>Phone</th>
-            <th>Products</th>
-            <th>Total Products Qty</th>
-            <th>Revenue Generated</th>
-            <th>Inventory Worth</th>
+            <th>Email</th>
+            <th>Date Created</th>
+            <th>Action</th>
           </tr>
         </thead>
         <tfoot>
           <tr>
             <th>Vendor ID</th>
             <th>Vendor Name</th>
+            <th>Description</th>
             <th>Phone</th>
-            <th>Products</th>
-            <th>Total Products Qty</th>
-            <th>Revenue Generated</th>
-            <th>Inventory Worth</th>
+            <th>Email</th>
+            <th>Date Created</th>
+            <th>Action</th>
           </tr>
         </tfoot>
         <tbody>
-          <tr>
-            <td>054681</td>
-            <td>Aness Ahmad</td>
-            <td>555-555-555</td>
-            <td>7</td>
-            <td>21</td>
-            <td>Rs9310</td>
-            <td>Rs16000</td>
-          </tr>
-          <tr>
-            <td>054682</td>
-            <td>Faisal Hayat</td>
-            <td>555-555-555</td>
-            <td>3</td>
-            <td>8</td>
-            <td>Rs7000</td>
-            <td>Rs11500</td>
-          </tr>
-          <tr>
-            <td>054683</td>
-            <td>Haider Abbass</td>
-            <td>555-555-555</td>
-            <td>16</td>
-            <td>65</td>
-            <td>Rs9100</td>
-            <td>Rs8600</td>
-          </tr><tr>
-            <td>01</td>
-            <td>Abdul Wahid Babar</td>
-            <td>555-555-555</td>
-            <td>7</td>
-            <td>21</td>
-            <td>Rs9310</td>
-            <td>Rs16000</td>
-          </tr>
-          <tr>
-            <td>02</td>
-            <td>Nouman Aslam</td>
-            <td>555-555-555</td>
-            <td>3</td>
-            <td>8</td>
-            <td>Rs7000</td>
-            <td>Rs11500</td>
-          </tr>
-          <tr>
-            <td>03</td>
-            <td>Zohaib Saleem</td>
-            <td>555-555-555</td>
-            <td>16</td>
-            <td>65</td>
-            <td>Rs9100</td>
-            <td>Rs8600</td>
-          </tr><tr>
-            <td>01</td>
-            <td>Ahmed Bangyal</td>
-            <td>555-555-555</td>
-            <td>7</td>
-            <td>21</td>
-            <td>Rs9310</td>
-            <td>Rs16000</td>
-          </tr>
+          <?php
+            while ($row = mysqli_fetch_array($res)) {
+              $vendorID = $row['id'];
+              $vendorName = $row['name'];
+              $vendorPhone = $row['phone'];
+              $vendorEmail = $row['email'];
+              $vendorDesc = $row['description'];
+              $dateCreated = $row['date_created'];
+
+              ?>
+
+              <tr>
+                <td><?php echo $vendorID; ?></td>
+                <td><?php echo $vendorName; ?></td>
+                <td><?php echo $vendorDesc; ?></td>
+                <td><?php echo $vendorPhone; ?></td>
+                <td><?php echo $vendorEmail; ?></td>
+                <td><?php echo $dateCreated; ?></td>
+                <td class="text-center"> <a href="edit-vendors.php?vendor=<?php echo $vendorName; ?>">Edit</a> </td>
+              </tr>
+              <?php
+            }
+
+          ?>
         </tbody>
       </table>
     </div>
