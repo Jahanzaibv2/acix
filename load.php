@@ -6,7 +6,7 @@ if (!defined('ABSPATH')) {
 
   define('APPINC', 'app-includes');
 
-  include 'tests/appconnect.php';
-  include 'tests/create-db-tables.php';
+  include (ABSPATH.'/admin/app-config.php');
+  include (ABSPATH.'/admin/plot-database.php');
 
 ?>
