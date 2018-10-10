@@ -10,7 +10,16 @@
 ?>
 <!DOCTYPE html>
 <html lang="en">
-  <?php require (ABSPATH.APPINC."/modules/head.php"); ?>
+  <?php
+    require (ABSPATH.'/admin/scripts/add-sale.php');
+    require (ABSPATH.'/admin/scripts/add-product.php');
+    require (ABSPATH.'/admin/scripts/add-vendor.php');
+    require (ABSPATH.'/admin/scripts/add-product-type.php');
+    require (ABSPATH.'/admin/scripts/add-brand.php');
+    require (ABSPATH.'/admin/scripts/add-expense-account.php');
+    require (ABSPATH.'/admin/scripts/add-expense.php');
+    require (ABSPATH.APPINC."/modules/head.php");
+  ?>
   <body class="bg-dark">
     <div class="container">
       <div class="card card-login mx-auto mt-5">

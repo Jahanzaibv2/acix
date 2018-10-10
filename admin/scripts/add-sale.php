@@ -174,6 +174,7 @@
 
     }else {
       // $addSaleQuery failed!
+      echo 'sale query failed';
     }
 
 

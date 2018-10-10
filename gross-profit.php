@@ -10,7 +10,16 @@
 ?>
 <!DOCTYPE html>
 <html lang="en">
-  <?php require (ABSPATH.APPINC."/modules/head.php"); ?>
+  <?php
+    require (ABSPATH.'/admin/scripts/add-sale.php');
+    require (ABSPATH.'/admin/scripts/add-product.php');
+    require (ABSPATH.'/admin/scripts/add-vendor.php');
+    require (ABSPATH.'/admin/scripts/add-product-type.php');
+    require (ABSPATH.'/admin/scripts/add-brand.php');
+    require (ABSPATH.'/admin/scripts/add-expense-account.php');
+    require (ABSPATH.'/admin/scripts/add-expense.php');
+    require (ABSPATH.APPINC."/modules/head.php");
+  ?>
   <body id="page-top">
     <?php require (ABSPATH.APPINC."/modules/nav.php"); ?>
     <div id="wrapper">
