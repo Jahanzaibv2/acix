@@ -1,6 +1,5 @@
 <?php
 
-
   include (ABSPATH.'/admin/scripts/get-sales-count.php');
 
 ?>
