@@ -1,6 +1,6 @@
 <?php  ?>
-    <nav class="navbar navbar-expand navbar-dark bg-dark static-top">
-      <a class="navbar-brand mr-1" href="index.php">Acix Sales Pro</a>
+    <nav class="navbar navbar-expand navbar-dark bg-dark sticky-top">
+      <a class="navbar-brand mr-1" href="index.php"> <img src="app-includes/img/logo.png" alt=""> </a>
       <button class="btn btn-link btn-sm text-white order-1 order-sm-0" id="sidebarToggle" href="#">
         <i class="fa fa-bars"></i>
       </button>
