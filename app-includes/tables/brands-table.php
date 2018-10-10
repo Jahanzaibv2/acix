@@ -18,144 +18,57 @@
       <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
         <thead>
           <tr>
-            <th>Sr#</th>
+            <th>BrandID#</th>
             <th>Brand Name</th>
-            <th>Products</th>
-            <th>Total Products Qty</th>
-            <th>Revenue Generated</th>
-            <th>Inventory Worth</th>
+            <th>Description</th>
+            <th>Total Products</th>
+            <th>Date Created</th>
+            <th>Action</th>
           </tr>
         </thead>
         <tfoot>
           <tr>
-            <th>Sr#</th>
+            <th>BrandID#</th>
             <th>Brand Name</th>
-            <th>Products</th>
-            <th>Total Products Qty</th>
-            <th>Revenue Generated</th>
-            <th>Inventory Worth</th>
+            <th>Description</th>
+            <th>Total Products</th>
+            <th>Date Created</th>
+            <th>Action</th>
           </tr>
         </tfoot>
         <tbody>
-          <tr>
-            <td>01</td>
-            <td>Audionic</td>
-            <td>7</td>
-            <td>21</td>
-            <td>Rs9310</td>
-            <td>Rs16000</td>
-          </tr>
-          <tr>
-            <td>02</td>
-            <td>DELL</td>
-            <td>3</td>
-            <td>8</td>
-            <td>Rs7000</td>
-            <td>Rs11500</td>
-          </tr>
-          <tr>
-            <td>03</td>
-            <td>HP</td>
-            <td>16</td>
-            <td>65</td>
-            <td>Rs9100</td>
-            <td>Rs8600</td>
-          </tr><tr>
-            <td>01</td>
-            <td>Audionic</td>
-            <td>7</td>
-            <td>21</td>
-            <td>Rs9310</td>
-            <td>Rs16000</td>
-          </tr>
-          <tr>
-            <td>02</td>
-            <td>DELL</td>
-            <td>3</td>
-            <td>8</td>
-            <td>Rs7000</td>
-            <td>Rs11500</td>
-          </tr>
-          <tr>
-            <td>03</td>
-            <td>HP</td>
-            <td>16</td>
-            <td>65</td>
-            <td>Rs9100</td>
-            <td>Rs8600</td>
-          </tr><tr>
-            <td>01</td>
-            <td>Audionic</td>
-            <td>7</td>
-            <td>21</td>
-            <td>Rs9310</td>
-            <td>Rs16000</td>
-          </tr>
-          <tr>
-            <td>02</td>
-            <td>DELL</td>
-            <td>3</td>
-            <td>8</td>
-            <td>Rs7000</td>
-            <td>Rs11500</td>
-          </tr>
-          <tr>
-            <td>03</td>
-            <td>HP</td>
-            <td>16</td>
-            <td>65</td>
-            <td>Rs9100</td>
-            <td>Rs8600</td>
-          </tr><tr>
-            <td>01</td>
-            <td>Audionic</td>
-            <td>7</td>
-            <td>21</td>
-            <td>Rs9310</td>
-            <td>Rs16000</td>
-          </tr>
-          <tr>
-            <td>02</td>
-            <td>DELL</td>
-            <td>3</td>
-            <td>8</td>
-            <td>Rs7000</td>
-            <td>Rs11500</td>
-          </tr>
-          <tr>
-            <td>03</td>
-            <td>HP</td>
-            <td>16</td>
-            <td>65</td>
-            <td>Rs9100</td>
-            <td>Rs8600</td>
-          </tr><tr>
-            <td>01</td>
-            <td>Audionic</td>
-            <td>7</td>
-            <td>21</td>
-            <td>Rs9310</td>
-            <td>Rs16000</td>
-          </tr>
-          <tr>
-            <td>02</td>
-            <td>DELL</td>
-            <td>3</td>
-            <td>8</td>
-            <td>Rs7000</td>
-            <td>Rs11500</td>
-          </tr>
-          <tr>
-            <td>03</td>
-            <td>HP</td>
-            <td>16</td>
-            <td>65</td>
-            <td>Rs9100</td>
-            <td>Rs8600</td>
-          </tr>
+          <?php
+            while ($row = mysqli_fetch_array($res)) {
+              $brandID = $row['id'];
+              $brandName = $row['name'];
+              $brandDesc = $row['description'];
+              $dateCreated = $row['date_created'];
+
+              $getProductsQuery = mysqli_query($appconnect, "SELECT * FROM `products` WHERE `brand_id`='$brandID'");
+
+              if ($getProductsQuery) {
+                $totalProducts = mysqli_num_rows($getProductsQuery);
+              }else {
+                $totalProducts = 0;
+              }
+
+              ?>
+
+              <tr>
+                <td><?php echo $brandID; ?></td>
+                <td><?php echo $brandName; ?></td>
+                <td><?php echo $brandDesc; ?></td>
+                <td><?php echo $totalProducts; ?></td>
+                <td><?php echo $dateCreated; ?></td>
+                <td class="text-center"> <a href="edit-brand.php?brand=<?php echo $brandID; ?>">Edit</a> </td>
+              </tr>
+              <?php
+            }
+
+          ?>
         </tbody>
       </table>
     </div>
   </div>
-  <div class="card-footer small text-muted">Updated yesterday at 11:59 PM</div>
+  <!-- <div class="card-footer small text-muted">Updated yesterday at 11:59 PM</div> -->
 </div>
