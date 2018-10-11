@@ -4,12 +4,24 @@ session_start();
 
   if (isset($_SESSION['user_id'])) {
 
+    $ID = $_SESSION['user_id'];
+
   require ('load.php');
+  require (ABSPATH.'/admin/scripts/update-profile.php');
 
 
   $PAGE_TITLE  = "Profile";
   $PAGE_DESC   = "...";
   $PAGE_AUTHOR = "...";
+
+
+    $res = mysqli_query($appconnect, "SELECT * FROM `users` WHERE `id`='$ID'");
+    $row = mysqli_fetch_array($res);
+
+    $username = $row['username'];
+    $fullName = $row['fullname'];
+    $email    = $row['email'];
+    $userlevel    = $row['userlevel'];
 
 ?>
 <!DOCTYPE html>
@@ -31,10 +43,52 @@ session_start();
       <div id="content-wrapper">
         <div class="container-fluid">
           <?php require (ABSPATH.APPINC."/modules/breadcrumbs.php"); ?>
-          <h1>Blank Page</h1>
+          <h1>Welcome, <?php echo $fullName; ?></h1>
           <hr>
-          <p>This is a great starting point for new custom pages.</p>
+          <p>Here you'll see all stuff specific to you.</p>
         </div>
+        <div class="card card-register mx-auto mt-5">
+          <div class="card-header bg-dark text-white"> <i class="fa fa-edit"></i> Edit your Account Information</div>
+          <div class="card-body">
+            <form class="" action="" method="post">
+              <div class="form-group">
+                <div class="form-label-group">
+                  <input type="text" name="fullname" id="fullname" class="form-control" placeholder="Your Name" value="<?php echo $fullName; ?>" required="required" autofocus>
+                  <label for="fullname">Your Name</label>
+                </div>
+              </div>
+              <div class="form-group">
+                <div class="form-label-group">
+                  <input type="text" name="username" id="username" class="form-control" placeholder="Your Username" value="<?php echo $username; ?>" required="required" autofocus>
+                  <label for="username">Your Username</label>
+                </div>
+              </div>
+              <div class="form-group">
+                <div class="form-label-group">
+                  <input type="email" name="email" id="email" class="form-control" placeholder="Your Email address" value="<?php echo $email; ?>" required="required" autofocus>
+                  <label for="email">Your Email Address</label>
+                </div>
+              </div>
+              <hr>
+              <div class="text-center">
+                Is it really you, <?php echo $fullName; ?>?
+              </div>
+              <hr>
+              <div class="form-group">
+                <div class="form-label-group">
+                  <input type="password" name="password" id="password" class="form-control" placeholder="Enter your Password for confirmation" required="required" autofocus>
+                  <label for="password">Enter your Password for confirmation</label>
+                </div>
+              </div>
+              <input type="submit" name="update-profile" class="btn btn-primary btn-block" href="" value="Update">
+            </form>
+            <br>
+            <div class="card-footer bg-white">
+              <small class="text-muted"><em>This record was last updated on <?php echo $lastUpdated; ?></em></small>
+            </div>
+          </div>
+        </div>
+        <br><br>
         <br><br><br>
         <?php require (ABSPATH.APPINC.'/modules/footer.php'); ?>
       </div>
