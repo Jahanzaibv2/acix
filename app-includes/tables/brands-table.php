@@ -60,7 +60,7 @@
                 <td><?php echo $brandDesc; ?></td>
                 <td><?php echo $totalProducts; ?></td>
                 <td><?php echo $dateCreated; ?></td>
-                <td class="text-center"> <a href="edit-brand.php?brand=<?php echo $brandID; ?>">Edit</a> </td>
+                <td class="text-center"> <a href="edit-brands.php?brand=<?php echo $brandName; ?>">Edit</a> </td>
               </tr>
               <?php
             }
