@@ -75,9 +75,6 @@ session_start();
               <input type="submit" name="update-profile" class="btn btn-primary btn-block" href="" value="Update">
             </form>
             <br>
-            <div class="card-footer bg-white">
-              <small class="text-muted"><em>This record was last updated on <?php echo $lastUpdated; ?></em></small>
-            </div>
           </div>
         </div>
         <br><br>
