@@ -69,7 +69,7 @@
             <i class="fa fa-user-circle fa-fw"></i>
           </a>
           <div class="dropdown-menu dropdown-menu-right" aria-labelledby="userDropdown">
-            <div class="dropdown-header">Rao Ahmed</div>
+            <div class="dropdown-header"><?php echo $fullName; ?></div>
             <a class="dropdown-item" href="profile.php"> <i class="fa fa-user"></i> Profile</a>
             <div class="dropdown-divider"></div>
             <a class="dropdown-item" href="#"> <i class="fa fa-cog"></i> Settings</a>
