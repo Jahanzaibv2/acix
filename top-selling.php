@@ -1,5 +1,9 @@
 <?php
 
+session_start();
+
+  if (isset($_SESSION['user_id'])) {
+
   require ('load.php');
 
 
@@ -56,3 +60,10 @@
     ?>
     </body>
   </html>
+
+  <?php
+  }else {
+    header('location: login.php');
+  }
+
+  ?>

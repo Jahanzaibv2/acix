@@ -76,7 +76,7 @@
                 </div>
                 <div class="col-md-6">
                   <div class="form-label-group">
-                    <input type="text" id="username" class="form-control" placeholder="Enter your username" required="required">
+                    <input type="text" name="username" id="username" class="form-control" placeholder="Enter your username" required="required">
                     <label for="username">Your username</label>
                   </div>
                 </div>

@@ -1,11 +1,15 @@
 <?php
 
+
   require ('load.php');
 
+  require(ABSPATH.'/admin/scripts/login.php');
 
   $PAGE_TITLE  = "Login";
   $PAGE_DESC   = "...";
   $PAGE_AUTHOR = "..."
+
+
 
 ?>
 <!DOCTYPE html>
@@ -16,16 +20,16 @@
       <div class="card card-login mx-auto mt-5">
         <div class="card-header bg-primary text-white">Login to your account</div>
         <div class="card-body">
-          <form>
+          <form action="" method="post">
             <div class="form-group">
               <div class="form-label-group">
-                <input type="text" id="username" class="form-control" placeholder="username" required="required" autofocus="autofocus">
+                <input type="text" name="username" id="username" class="form-control" placeholder="username" required="required" autofocus="autofocus">
                 <label for="username">Enter username</label>
               </div>
             </div>
             <div class="form-group">
               <div class="form-label-group">
-                <input type="password" id="inputPassword" class="form-control" placeholder="Password" required="required">
+                <input type="password" name="password" id="inputPassword" class="form-control" placeholder="Password" required="required">
                 <label for="inputPassword">Password</label>
               </div>
             </div>
@@ -37,7 +41,7 @@
                 </label>
               </div>
             </div>
-            <a class="btn btn-primary btn-block" href="index.php">Login</a>
+            <input type="submit" name="login" class="btn btn-primary btn-block" value="Login">
           </form>
           <div class="text-center">
             <br>

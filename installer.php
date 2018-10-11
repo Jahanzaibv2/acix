@@ -18,6 +18,7 @@
 
     if ($passwordA == $passwordB) {
       $password = $passwordB;
+      $encryptedPassword = md5($password);
 
       $checkUser = mysqli_query($appconnect, "SELECT * FROM `users`");
 
@@ -36,7 +37,7 @@
                   ) VALUES (
                     NULL,
                     '$username',
-                    '$password',
+                    '$encryptedPassword',
                     '$fullName',
                     'No email provided yet',
                     '1',
