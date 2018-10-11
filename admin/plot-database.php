@@ -110,7 +110,7 @@
                                          );
 
 
-    $notifications = mysqli_query($appconnect, "CREATE TABLE `acix`.`notifications` (
+    $notifications = mysqli_query($appconnect, "CREATE TABLE IF NOT EXISTS `acix`.`notifications` (
                                                 `id` INT NOT NULL AUTO_INCREMENT ,
                                                 `about` VARCHAR(255) NOT NULL ,
                                                 `description` VARCHAR(255) NOT NULL ,
@@ -120,4 +120,14 @@
                                                 PRIMARY KEY (`id`))"
                                               );
 
-?>
+    $stores = mysqli_query($appconnect, "CREATE TABLE IF NOT EXISTS `acix`.`stores` (
+                                        `id` INT NOT NULL AUTO_INCREMENT ,
+                                        `name` VARCHAR(255) NOT NULL ,
+                                        `website` VARCHAR(255) NOT NULL ,
+                                        `phone` VARCHAR(255) NOT NULL ,
+                                        `email` VARCHAR(255) NOT NULL ,
+                                         `date_created` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP ,
+                                        PRIMARY KEY (`id`))"
+                                      );
+
+    ?>
