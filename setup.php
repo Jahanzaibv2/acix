@@ -13,22 +13,25 @@
   <?php require (ABSPATH.APPINC."/modules/head.php"); ?>
   <body class="bg-dark">
     <div class="container">
+      <div class="col-md-12 text-center mb-3 mt-5">
+        <img src="app-includes/img/logo.png" alt="">
+      </div>
       <div class="card card-register mx-auto mt-5">
-        <div class="card-header bg-primary text-white">Before we get on to using store, I need some information to proceed.</div>
+        <div class="card-header bg-primary text-white">I need some information to proceed.</div>
         <div class="card-body">
-          <form>
+          <form class="" action="installer.php" method="post">
             <div class="form-group">
               <div class="form-row">
                 <div class="col-md-6">
                   <div class="form-label-group">
-                    <input type="text" id="hostName" class="form-control" placeholder="Enter hostname here" required="required" autofocus="autofocus">
-                    <label for="hostName">Server's Hostname</label>
+                    <input type="text" name="hostname" id="hostname" class="form-control" placeholder="Enter hostname here" required="required" autofocus="autofocus">
+                    <label for="hostname">Hostname</label>
                   </div>
                 </div>
                 <div class="col-md-6">
                   <div class="form-label-group">
-                    <input type="text" id="dbName" class="form-control" placeholder="Enter database name" required="required">
-                    <label for="dbName">Database Name</label>
+                    <input type="text" name="database" id="database" class="form-control" placeholder="Enter database name" required="required">
+                    <label for="database">Database Name</label>
                   </div>
                 </div>
               </div>
@@ -37,14 +40,14 @@
               <div class="form-row">
                 <div class="col-md-6">
                   <div class="form-label-group">
-                    <input type="text" id="dbUser" class="form-control" placeholder="Enter name of your Database User" required="required" autofocus="autofocus">
-                    <label for="dbUser">Database username</label>
+                    <input type="text" name="dbuser" id="dbuser" class="form-control" placeholder="Enter name of your Database User" required="required" autofocus="autofocus">
+                    <label for="dbuser">Database username</label>
                   </div>
                 </div>
                 <div class="col-md-6">
                   <div class="form-label-group">
-                    <input type="password" id="dbPassword" class="form-control" placeholder="Enter username" required="required">
-                    <label for="dbPassword">Password</label>
+                    <input type="password" name="dbpassword" id="dbpassword" class="form-control" placeholder="Enter username" required="required">
+                    <label for="dbpassword">Password</label>
                   </div>
                 </div>
               </div>
@@ -59,16 +62,16 @@
             <hr>
             <div class="form-group">
               <div class="form-label-group">
-                <input type="text" id="storeName" class="form-control" placeholder="Enter your store name" required="required">
-                <label for="storeName">Your Store Name</label>
+                <input type="text" name="storename" id="storename" class="form-control" placeholder="Enter your store name" required="required">
+                <label for="storename">Your Store Name</label>
               </div>
             </div>
             <div class="form-group">
               <div class="form-row">
                 <div class="col-md-6">
                   <div class="form-label-group">
-                    <input type="text" id="fullName" class="form-control" placeholder="Your name" required="required" autofocus="autofocus">
-                    <label for="fullName">Your Full Name</label>
+                    <input type="text" name="fullname" id="fullname" class="form-control" placeholder="Your name" required="required" autofocus="autofocus">
+                    <label for="fullname">Your Full Name</label>
                   </div>
                 </div>
                 <div class="col-md-6">
@@ -83,19 +86,19 @@
               <div class="form-row">
                 <div class="col-md-6">
                   <div class="form-label-group">
-                    <input type="password" id="inputPassword" class="form-control" placeholder="Password" required="required">
-                    <label for="inputPassword">Password</label>
+                    <input type="password" name="passwordA" id="passwordA" class="form-control" placeholder="Password" required="required">
+                    <label for="passwordA">Password</label>
                   </div>
                 </div>
                 <div class="col-md-6">
                   <div class="form-label-group">
-                    <input type="password" id="confirmPassword" class="form-control" placeholder="Confirm password" required="required">
-                    <label for="confirmPassword">Confirm password</label>
+                    <input type="password" name="passwordB" id="passwordB" class="form-control" placeholder="Confirm password" required="required">
+                    <label for="passwordB">Confirm password</label>
                   </div>
                 </div>
               </div>
             </div>
-            <input type="submit" class="btn btn-primary btn-block" href="" value="Install">
+            <input type="submit" name="install" class="btn btn-primary btn-block" href="" value="Install">
           </form>
           <div class="text-center">
             <br>
