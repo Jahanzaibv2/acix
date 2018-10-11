@@ -35,7 +35,7 @@
                       ?>>
                       <?php
                         echo $product_name;
-                        if ($stockValue<=3) {
+                        if ($stockValue<1) {
                           echo " (Out of Stock)";
                         }
                       ?>
