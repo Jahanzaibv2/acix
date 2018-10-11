@@ -24,6 +24,22 @@
 
       if ((mysqli_num_rows($checkUser))<1) {
 
+        $addStore = mysqli_query($appconnect, "INSERT INTO `stores` (
+                                `id`,
+                                `name`,
+                                `website`,
+                                `phone`,
+                                `email`,
+                                `date_created`
+                              ) VALUES (
+                                NULL,
+                                '$storeName',
+                                'no website provided',
+                                'no phone provided',
+                                'no email provided',
+                                current_timestamp())"
+                              );
+
         $adduser = mysqli_query($appconnect, "INSERT INTO `users` (
                     `id`,
                     `username`,
