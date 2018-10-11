@@ -108,4 +108,16 @@
                                            `date_created` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP ,
                                            PRIMARY KEY (`id`))"
                                          );
+
+
+    $notifications = mysqli_query($appconnect, "CREATE TABLE `acix`.`notifications` (
+                                                `id` INT NOT NULL AUTO_INCREMENT ,
+                                                `about` VARCHAR(255) NOT NULL ,
+                                                `description` VARCHAR(255) NOT NULL ,
+                                                `link` VARCHAR(255) NOT NULL ,
+                                                `date_created` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP ,
+                                                `visibility` BOOLEAN NOT NULL DEFAULT TRUE ,
+                                                PRIMARY KEY (`id`))"
+                                              );
+
 ?>
