@@ -9,7 +9,7 @@ session_start();
 
   $PAGE_TITLE  = "Page Not Found";
   $PAGE_DESC   = "...";
-  $PAGE_AUTHOR = "..."
+  $PAGE_AUTHOR = "...";
 
 ?>
 <!DOCTYPE html>

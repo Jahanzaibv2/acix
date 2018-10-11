@@ -9,7 +9,7 @@ session_start();
 
   $PAGE_TITLE  = "Payment Reports";
   $PAGE_DESC   = "...";
-  $PAGE_AUTHOR = "..."
+  $PAGE_AUTHOR = "...";
 
 ?>
 <!DOCTYPE html>

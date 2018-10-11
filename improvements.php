@@ -9,7 +9,7 @@ session_start();
 
   $PAGE_TITLE  = "Improvements";
   $PAGE_DESC   = "...";
-  $PAGE_AUTHOR = "..."
+  $PAGE_AUTHOR = "...";
 
 ?>
 <!DOCTYPE html>

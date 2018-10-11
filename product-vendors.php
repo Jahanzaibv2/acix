@@ -9,7 +9,7 @@ session_start();
 
   $PAGE_TITLE  = "Vendors";
   $PAGE_DESC   = "...";
-  $PAGE_AUTHOR = "..."
+  $PAGE_AUTHOR = "...";
 
 ?>
 <!DOCTYPE html>

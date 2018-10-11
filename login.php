@@ -11,7 +11,7 @@ session_start();
 
   $PAGE_TITLE  = "Login";
   $PAGE_DESC   = "...";
-  $PAGE_AUTHOR = "..."
+  $PAGE_AUTHOR = "...";
 
 
 

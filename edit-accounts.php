@@ -3,13 +3,14 @@
 session_start();
 
   if (isset($_SESSION['user_id'])) {
-
   require ('load.php');
+  $accountTitle = mysqli_real_escape_string($appconnect, $_GET['account']);
 
 
-  $PAGE_TITLE  = "Short Items";
+  $PAGE_TITLE  = "Blank";
   $PAGE_DESC   = "...";
   $PAGE_AUTHOR = "...";
+
 
 ?>
 <!DOCTYPE html>
@@ -32,24 +33,26 @@ session_start();
         <div class="container-fluid">
           <?php
             require (ABSPATH.APPINC."/modules/breadcrumbs.php");
-            require (ABSPATH.APPINC."/tables/short-items-table.php");
-            ?>
-          </div>
-          <br><br><br>
-          <?php require (ABSPATH.APPINC.'/modules/footer.php'); ?>
+          ?>
+          <h1><?php echo $accountTitle; ?></h1>
+          <hr>
+          <p>This is a great starting point for new custom pages.</p>
         </div>
+        <br><br><br>
+        <?php require (ABSPATH.APPINC.'/modules/footer.php'); ?>
       </div>
-      <?php
-        include (ABSPATH.APPINC.'/modules/scroll-to-top.php');
-        require (ABSPATH.APPINC.'/modules/modal-logout.php');
-        require (ABSPATH.APPINC.'/modules/modal-add-sale.php');
-        require (ABSPATH.APPINC.'/modules/modal-add-product.php');
-        require (ABSPATH.APPINC.'/modules/modal-add-product-type.php');
-        require (ABSPATH.APPINC.'/modules/modal-add-brand.php');
-        require (ABSPATH.APPINC.'/modules/modal-add-vendor.php');
-        require (ABSPATH.APPINC.'/modules/modal-add-expense-account.php');
-        include (ABSPATH.APPINC."/modules/footer-scripts.php");
-      ?>
+    </div>
+    <?php
+      include (ABSPATH.APPINC.'/modules/scroll-to-top.php');
+      require (ABSPATH.APPINC.'/modules/modal-logout.php');
+      require (ABSPATH.APPINC.'/modules/modal-add-sale.php');
+      require (ABSPATH.APPINC.'/modules/modal-add-product.php');
+      require (ABSPATH.APPINC.'/modules/modal-add-product-type.php');
+      require (ABSPATH.APPINC.'/modules/modal-add-brand.php');
+      require (ABSPATH.APPINC.'/modules/modal-add-vendor.php');
+      require (ABSPATH.APPINC.'/modules/modal-add-expense-account.php');
+      include (ABSPATH.APPINC."/modules/footer-scripts.php");
+    ?>
     </body>
   </html>
 

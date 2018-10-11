@@ -5,7 +5,7 @@
 
   $PAGE_TITLE  = "Installation";
   $PAGE_DESC   = "...";
-  $PAGE_AUTHOR = "..."
+  $PAGE_AUTHOR = "...";
 
 ?>
 <!DOCTYPE html>

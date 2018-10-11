@@ -9,7 +9,7 @@ session_start();
 
   $PAGE_TITLE  = "Product Types";
   $PAGE_DESC   = "...";
-  $PAGE_AUTHOR = "..."
+  $PAGE_AUTHOR = "...";
 
 ?>
 <!DOCTYPE html>

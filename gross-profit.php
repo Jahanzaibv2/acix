@@ -8,7 +8,7 @@ session_start();
 
   $PAGE_TITLE  = "Gross Profit";
   $PAGE_DESC   = "...";
-  $PAGE_AUTHOR = "..."
+  $PAGE_AUTHOR = "...";
 
 ?>
 <!DOCTYPE html>
