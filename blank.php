@@ -3,7 +3,9 @@
 session_start();
 
   if (isset($_SESSION['user_id'])) {
-  require ('load.php');
+
+    require ('load.php');
+    require (ABSPATH.'/admin/scripts/getuserinfo.php');
 
 
   $PAGE_TITLE  = "Blank";

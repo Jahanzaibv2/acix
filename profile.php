@@ -4,10 +4,9 @@ session_start();
 
   if (isset($_SESSION['user_id'])) {
 
-    $ID = $_SESSION['user_id'];
-
-  require ('load.php');
-  require (ABSPATH.'/admin/scripts/update-profile.php');
+    require ('load.php');
+    require (ABSPATH.'/admin/scripts/getuserinfo.php');
+    require (ABSPATH.'/admin/scripts/update-profile.php');
 
 
   $PAGE_TITLE  = "Profile";
@@ -15,13 +14,6 @@ session_start();
   $PAGE_AUTHOR = "...";
 
 
-    $res = mysqli_query($appconnect, "SELECT * FROM `users` WHERE `id`='$ID'");
-    $row = mysqli_fetch_array($res);
-
-    $username = $row['username'];
-    $fullName = $row['fullname'];
-    $email    = $row['email'];
-    $userlevel    = $row['userlevel'];
 
 ?>
 <!DOCTYPE html>
