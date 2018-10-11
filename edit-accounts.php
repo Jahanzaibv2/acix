@@ -6,23 +6,23 @@ session_start();
 
     require ('load.php');
     require (ABSPATH.'/admin/scripts/getuserinfo.php');
-  require (ABSPATH.'/admin/scripts/update-accounts.php');
+    require (ABSPATH.'/admin/scripts/update-accounts.php');
 
 
-  $PAGE_TITLE  = "Edit Accounts";
-  $PAGE_DESC   = "...";
-  $PAGE_AUTHOR = "...";
+    $PAGE_TITLE  = "Edit Accounts";
+    $PAGE_DESC   = "...";
+    $PAGE_AUTHOR = "...";
 
-  $accountID = mysqli_real_escape_string($appconnect, $_GET['account']);
+    $accountID = mysqli_real_escape_string($appconnect, $_GET['account']);
 
-  $res = mysqli_query($appconnect, "SELECT * FROM `expense_accounts` WHERE `id`='$accountID'");
-  $row = mysqli_fetch_array($res);
+    $res = mysqli_query($appconnect, "SELECT * FROM `expense_accounts` WHERE `id`='$accountID'");
+    $row = mysqli_fetch_array($res);
 
-  $accountID = $row['id'];
-  $accountTitle = $row['account_title'];
-  $accountDesc = $row['description'];
-  $lastUpdated = $row['last_updated'];
-  $accountVisibility = $row['visibility'];
+    $accountID = $row['id'];
+    $accountTitle = $row['account_title'];
+    $accountDesc = $row['description'];
+    $lastUpdated = $row['last_updated'];
+    $accountVisibility = $row['visibility'];
 
 ?>
 <!DOCTYPE html>

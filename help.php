@@ -6,21 +6,21 @@ session_start();
 
     require ('load.php');
     require (ABSPATH.'/admin/scripts/getuserinfo.php');
-    
-  header('location: /');
-  exit;
 
-  //////////////////////////////////////////////
-  //
-  // Discarding Help Docs, for now.
-  //
-  /////////////////////////////////////////////
-  require ('load.php');
+    header('location: /');
+    exit;
+
+    //////////////////////////////////////////////
+    //
+    // Discarding Help Docs, for now.
+    //
+    /////////////////////////////////////////////
+    require ('load.php');
 
 
-  $PAGE_TITLE  = "Help Docs";
-  $PAGE_DESC   = "...";
-  $PAGE_AUTHOR = "...";
+    $PAGE_TITLE  = "Help Docs";
+    $PAGE_DESC   = "...";
+    $PAGE_AUTHOR = "...";
 
 ?>
 <!DOCTYPE html>

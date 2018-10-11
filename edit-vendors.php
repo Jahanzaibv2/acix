@@ -6,25 +6,25 @@ session_start();
 
     require ('load.php');
     require (ABSPATH.'/admin/scripts/getuserinfo.php');
-  require (ABSPATH.'/admin/scripts/update-vendors.php');
+    require (ABSPATH.'/admin/scripts/update-vendors.php');
 
 
-  $PAGE_TITLE  = "Edit Vendors";
-  $PAGE_DESC   = "...";
-  $PAGE_AUTHOR = "...";
+    $PAGE_TITLE  = "Edit Vendors";
+    $PAGE_DESC   = "...";
+    $PAGE_AUTHOR = "...";
 
-  $vendorID = mysqli_real_escape_string($appconnect, $_GET['vendor']);
+    $vendorID = mysqli_real_escape_string($appconnect, $_GET['vendor']);
 
-  $res = mysqli_query($appconnect, "SELECT * FROM `vendors` WHERE `id`='$vendorID'");
-  $row = mysqli_fetch_array($res);
+    $res = mysqli_query($appconnect, "SELECT * FROM `vendors` WHERE `id`='$vendorID'");
+    $row = mysqli_fetch_array($res);
 
-  $vendorID = $row['id'];
-  $vendorName = $row['name'];
-  $vendorPhone = $row['phone'];
-  $vendorEmail = $row['email'];
-  $vendorDesc = $row['description'];
-  $lastUpdated = $row['last_updated'];
-  $vendorVisibility = $row['visibility'];
+    $vendorID = $row['id'];
+    $vendorName = $row['name'];
+    $vendorPhone = $row['phone'];
+    $vendorEmail = $row['email'];
+    $vendorDesc = $row['description'];
+    $lastUpdated = $row['last_updated'];
+    $vendorVisibility = $row['visibility'];
 
 ?>
 <!DOCTYPE html>

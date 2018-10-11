@@ -6,22 +6,22 @@ session_start();
 
     require ('load.php');
     require (ABSPATH.'/admin/scripts/getuserinfo.php');
-    
-  header('location: /');
-  exit;
 
-  //////////////////////////////////////////////
-  //
-  // Discarding History Records, for now
-  //
-  /////////////////////////////////////////////
+    header('location: /');
+    exit;
 
-  require ('load.php');
+    //////////////////////////////////////////////
+    //
+    // Discarding History Records, for now
+    //
+    /////////////////////////////////////////////
+
+    require ('load.php');
 
 
-  $PAGE_TITLE  = "History";
-  $PAGE_DESC   = "...";
-  $PAGE_AUTHOR = "...";
+    $PAGE_TITLE  = "History";
+    $PAGE_DESC   = "...";
+    $PAGE_AUTHOR = "...";
 
 ?>
 <!DOCTYPE html>

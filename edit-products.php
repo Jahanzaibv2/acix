@@ -6,28 +6,28 @@ session_start();
 
     require ('load.php');
     require (ABSPATH.'/admin/scripts/getuserinfo.php');
-  require (ABSPATH.'/admin/scripts/update-products.php');
+    require (ABSPATH.'/admin/scripts/update-products.php');
 
 
-  $PAGE_TITLE  = "Edit Products";
-  $PAGE_DESC   = "...";
-  $PAGE_AUTHOR = "...";
+    $PAGE_TITLE  = "Edit Products";
+    $PAGE_DESC   = "...";
+    $PAGE_AUTHOR = "...";
 
-  $productID = mysqli_real_escape_string($appconnect, $_GET['product']);
+    $productID = mysqli_real_escape_string($appconnect, $_GET['product']);
 
-  $res = mysqli_query($appconnect, "SELECT * FROM `products` WHERE `id`='$productID'");
-  $row = mysqli_fetch_array($res);
+    $res = mysqli_query($appconnect, "SELECT * FROM `products` WHERE `id`='$productID'");
+    $row = mysqli_fetch_array($res);
 
-  $productID = $row['id'];
-  $productName    = $row['name'];
-  $productTypeID = $row['type_id'];
-  $productBrandID = $row['brand_id'];
-  $vendorID       = $row['vendor_id'];
-  $productPrice   = $row['price'];
-  $stockValue     = $row['stock'];
-  $productDesc    = $row['description'];
-  $lastUpdated = $row['last_updated'];
-  $productVisibility = $row['visibility'];
+    $productID = $row['id'];
+    $productName    = $row['name'];
+    $productTypeID = $row['type_id'];
+    $productBrandID = $row['brand_id'];
+    $vendorID       = $row['vendor_id'];
+    $productPrice   = $row['price'];
+    $stockValue     = $row['stock'];
+    $productDesc    = $row['description'];
+    $lastUpdated = $row['last_updated'];
+    $productVisibility = $row['visibility'];
 
 ?>
 <!DOCTYPE html>

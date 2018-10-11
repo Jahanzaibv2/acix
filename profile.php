@@ -9,9 +9,9 @@ session_start();
     require (ABSPATH.'/admin/scripts/update-profile.php');
 
 
-  $PAGE_TITLE  = "Profile";
-  $PAGE_DESC   = "...";
-  $PAGE_AUTHOR = "...";
+    $PAGE_TITLE  = "Profile";
+    $PAGE_DESC   = "...";
+    $PAGE_AUTHOR = "...";
 
 
 

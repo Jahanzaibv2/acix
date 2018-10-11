@@ -6,23 +6,23 @@ session_start();
 
     require ('load.php');
     require (ABSPATH.'/admin/scripts/getuserinfo.php');
-  require (ABSPATH.'/admin/scripts/update-product-types.php');
+    require (ABSPATH.'/admin/scripts/update-product-types.php');
 
 
-  $PAGE_TITLE  = "Edit Product Types";
-  $PAGE_DESC   = "...";
-  $PAGE_AUTHOR = "...";
+    $PAGE_TITLE  = "Edit Product Types";
+    $PAGE_DESC   = "...";
+    $PAGE_AUTHOR = "...";
 
-  $productTypeID = mysqli_real_escape_string($appconnect, $_GET['type']);
+    $productTypeID = mysqli_real_escape_string($appconnect, $_GET['type']);
 
-  $res = mysqli_query($appconnect, "SELECT * FROM `product_types` WHERE `id`='$productTypeID'");
-  $row = mysqli_fetch_array($res);
+    $res = mysqli_query($appconnect, "SELECT * FROM `product_types` WHERE `id`='$productTypeID'");
+    $row = mysqli_fetch_array($res);
 
-  $productTypeID = $row['id'];
-  $productTypeName = $row['type'];
-  $productTypeDesc = $row['description'];
-  $lastUpdated = $row['last_updated'];
-  $productTypeVisibility = $row['visibility'];
+    $productTypeID = $row['id'];
+    $productTypeName = $row['type'];
+    $productTypeDesc = $row['description'];
+    $lastUpdated = $row['last_updated'];
+    $productTypeVisibility = $row['visibility'];
 
 ?>
 <!DOCTYPE html>

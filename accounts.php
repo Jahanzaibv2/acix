@@ -8,9 +8,9 @@ session_start();
     require (ABSPATH.'/admin/scripts/getuserinfo.php');
 
 
-  $PAGE_TITLE  = "Accounts";
-  $PAGE_DESC   = "...";
-  $PAGE_AUTHOR = "...";
+    $PAGE_TITLE  = "Accounts";
+    $PAGE_DESC   = "...";
+    $PAGE_AUTHOR = "...";
 
 ?>
 <!DOCTYPE html>

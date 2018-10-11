@@ -8,9 +8,9 @@ session_start();
     require (ABSPATH.'/admin/scripts/getuserinfo.php');
 
 
-  $PAGE_TITLE  = "Inventory Reports";
-  $PAGE_DESC   = "...";
-  $PAGE_AUTHOR = "...";
+    $PAGE_TITLE  = "Inventory Reports";
+    $PAGE_DESC   = "...";
+    $PAGE_AUTHOR = "...";
 
 ?>
 <!DOCTYPE html>

@@ -7,11 +7,11 @@ session_start();
     require ('load.php');
     require (ABSPATH.'/admin/scripts/getuserinfo.php');
 
-  require(ABSPATH.'/admin/scripts/login.php');
+    require (ABSPATH.'/admin/scripts/login.php');
 
-  $PAGE_TITLE  = "Login";
-  $PAGE_DESC   = "...";
-  $PAGE_AUTHOR = "...";
+    $PAGE_TITLE  = "Login";
+    $PAGE_DESC   = "...";
+    $PAGE_AUTHOR = "...";
 
 
 

@@ -6,23 +6,23 @@ session_start();
 
     require ('load.php');
     require (ABSPATH.'/admin/scripts/getuserinfo.php');
-  require (ABSPATH.'/admin/scripts/update-brands.php');
+    require (ABSPATH.'/admin/scripts/update-brands.php');
 
 
-  $PAGE_TITLE  = "Edit Brands";
-  $PAGE_DESC   = "...";
-  $PAGE_AUTHOR = "...";
+    $PAGE_TITLE  = "Edit Brands";
+    $PAGE_DESC   = "...";
+    $PAGE_AUTHOR = "...";
 
-  $brandID = mysqli_real_escape_string($appconnect, $_GET['brand']);
+    $brandID = mysqli_real_escape_string($appconnect, $_GET['brand']);
 
-  $res = mysqli_query($appconnect, "SELECT * FROM `product_brands` WHERE `id`='$brandID'");
-  $row = mysqli_fetch_array($res);
+    $res = mysqli_query($appconnect, "SELECT * FROM `product_brands` WHERE `id`='$brandID'");
+    $row = mysqli_fetch_array($res);
 
-  $brandID = $row['id'];
-  $brandName = $row['name'];
-  $brandDesc = $row['description'];
-  $lastUpdated = $row['last_updated'];
-  $brandVisibility = $row['visibility'];
+    $brandID = $row['id'];
+    $brandName = $row['name'];
+    $brandDesc = $row['description'];
+    $lastUpdated = $row['last_updated'];
+    $brandVisibility = $row['visibility'];
 
 ?>
 <!DOCTYPE html>

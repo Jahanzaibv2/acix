@@ -4,7 +4,7 @@ session_start();
 
   if (isset($_SESSION['user_id'])) {
 
- // Won't use in MVP
+  // Won't use in MVP
   header('location: /');
   require ('load.php');
 
