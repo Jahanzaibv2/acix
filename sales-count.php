@@ -34,16 +34,10 @@ session_start();
           <?php require (ABSPATH.APPINC."/modules/breadcrumbs.php"); ?>
           <div class="row">
             <div class="col-md-6 col-sm-12 col-xs-12 mb-3">
-              <?php require (ABSPATH.APPINC."/cards/sales-count-last-7days.php"); ?>
+              <?php require (ABSPATH.APPINC."/cards/sales-last-month.php"); ?>
             </div>
             <div class="col-md-6 col-sm-12 col-xs-12 mb-3">
-              <?php require (ABSPATH.APPINC."/cards/sales-count-last-30days.php"); ?>
-            </div>
-            <div class="col-md-6 col-sm-12 col-xs-12 mb-3">
-              <?php require (ABSPATH.APPINC."/cards/sales-count-last-3months.php"); ?>
-            </div>
-            <div class="col-md-6 col-sm-12 col-xs-12 mb-3">
-              <?php require (ABSPATH.APPINC."/cards/sales-count-last-6months.php"); ?>
+              <?php require (ABSPATH.APPINC."/cards/sales-this-month.php"); ?>
             </div>
           </div>
           <div class="row">
