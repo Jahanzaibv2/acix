@@ -57,7 +57,7 @@
                 <td><?php echo $vendorPhone; ?></td>
                 <td><?php echo $vendorEmail; ?></td>
                 <td><?php echo $dateCreated; ?></td>
-                <td class="text-center"> <a href="edit-vendors.php?vendor=<?php echo $vendorName; ?>">Edit</a> </td>
+                <td class="text-center"> <a href="edit-vendors.php?vendor=<?php echo $vendorID; ?>">Edit</a> </td>
               </tr>
               <?php
             }
