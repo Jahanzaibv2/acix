@@ -3,14 +3,25 @@
 session_start();
 
   if (isset($_SESSION['user_id'])) {
+
   require ('load.php');
-  $accountTitle = mysqli_real_escape_string($appconnect, $_GET['account']);
+  require (ABSPATH.'/admin/scripts/update-accounts.php');
 
 
-  $PAGE_TITLE  = "Blank";
+  $PAGE_TITLE  = "Edit Accounts";
   $PAGE_DESC   = "...";
   $PAGE_AUTHOR = "...";
 
+  $accountID = mysqli_real_escape_string($appconnect, $_GET['account']);
+
+  $res = mysqli_query($appconnect, "SELECT * FROM `expense_accounts` WHERE `id`='$accountID'");
+  $row = mysqli_fetch_array($res);
+
+  $accountID = $row['id'];
+  $accountTitle = $row['account_title'];
+  $accountDesc = $row['description'];
+  $lastUpdated = $row['last_updated'];
+  $accountVisibility = $row['visibility'];
 
 ?>
 <!DOCTYPE html>
@@ -34,10 +45,41 @@ session_start();
           <?php
             require (ABSPATH.APPINC."/modules/breadcrumbs.php");
           ?>
-          <h1><?php echo $accountTitle; ?></h1>
+          <h1>Edit Accounts</h1>
           <hr>
-          <p>This is a great starting point for new custom pages.</p>
         </div>
+        <div class="card card-register mx-auto mt-5">
+          <div class="card-header bg-dark text-white"> <i class="fa fa-edit"></i> Edit <?php echo $accountTitle; ?></div>
+          <div class="card-body">
+            <form class="" action="" method="post">
+              <div class="form-group">
+                <div class="form-label-group">
+                  <input type="text" name="accountID" id="accountID" class="form-control" value="<?php echo $accountID; ?>" hidden>
+                  <label for="accountID">Account ID</label>
+                </div>
+              </div>
+              <div class="form-group">
+                <div class="form-label-group">
+                  <input type="text" name="accountTitle" id="accountTitle" class="form-control" placeholder="Account title" value="<?php echo $accountTitle; ?>" required="required" autofocus>
+                  <label for="accountTitle">Account Title</label>
+                </div>
+              </div>
+              <div class="form-group">
+                <div class="form-label-group">
+                  <textarea class="form-control" id="accountDesc" placeholder="Account Description" name="accountDesc" rows="8" cols="80" autofocus><?php echo $accountDesc; ?></textarea>
+                </div>
+              </div>
+
+              <input type="submit" name="update-account" class="btn btn-primary btn-block" href="" value="Update">
+            </form>
+            <br>
+            <div class="card-footer bg-white">
+              <small class="text-muted"><em>This record was last updated on <?php echo $lastUpdated; ?></em></small>
+            </div>
+          </div>
+        </div>
+        <br>
+        <br>
         <br><br><br>
         <?php require (ABSPATH.APPINC.'/modules/footer.php'); ?>
       </div>

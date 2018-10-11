@@ -68,7 +68,7 @@
                           <td>Rs<?php echo (number_format($totalExpenses)); ?></td>
                           <td><?php echo $transactionsMade; ?></td>
                           <td><?php echo $dateCreated; ?></td>
-                          <td class="text-center"> <a href="edit-accounts.php?account=<?php echo $accountTitle; ?>">Edit</a> </td>
+                          <td class="text-center"> <a href="edit-accounts.php?account=<?php echo $accountID; ?>">Edit</a> </td>
                         </tr>
                         <?php
                       }
