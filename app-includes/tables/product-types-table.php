@@ -65,7 +65,7 @@
                 <td><?php echo $productTypeDesc; ?></td>
                 <td><?php echo $totalProducts; ?></td>
                 <td><?php echo $dateCreated; ?></td>
-                <td class="text-center"> <a href="edit-product-types?type=<?php echo $productTypeName; ?>">Edit</a> </td>
+                <td class="text-center"> <a href="edit-product-types.php?type=<?php echo $productTypeID; ?>">Edit</a> </td>
               </tr>
               <?php
             }
