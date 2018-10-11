@@ -1,16 +1,18 @@
 <?php
 
     $users = mysqli_query($appconnect, "CREATE TABLE IF NOT EXISTS `acix`.`users` (
-                                        `id` INT NOT NULL AUTO_INCREMENT ,
-                                        `username` VARCHAR(255) NOT NULL ,
-                                        `name` VARCHAR(255) NULL DEFAULT 'Admin' ,
-                                        `password` VARCHAR(255) NOT NULL ,
-                                        `email` VARCHAR(255) NULL DEFAULT NULL ,
-                                        `userlevel` INT NOT NULL ,
-                                        `online` BOOLEAN NOT NULL ,
-                                        `signupdate` VARCHAR(255) NOT NULL DEFAULT CURRENT_TIMESTAMP ,
-                                        PRIMARY KEY (`id`), UNIQUE (`username`))"
-                                      );
+                          `id` INT NOT NULL AUTO_INCREMENT ,
+                          `username` VARCHAR(255) NOT NULL ,
+                          `password` VARCHAR(255) NOT NULL ,
+                          `fullname` VARCHAR(255) NOT NULL ,
+                          `email` VARCHAR(255) NULL ,
+                          `userlevel` BOOLEAN NOT NULL ,
+                          `online` BOOLEAN NOT NULL ,
+                          `visibility` BOOLEAN NOT NULL ,
+                          `date_created` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP ,
+                          PRIMARY KEY (`id`),
+                          UNIQUE (`username`))"
+                        );
 
     $vendors = mysqli_query($appconnect, "CREATE TABLE IF NOT EXISTS `acix`.`vendors` (
                                         `id` INT NOT NULL AUTO_INCREMENT ,
