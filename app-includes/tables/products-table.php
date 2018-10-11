@@ -96,7 +96,7 @@
                 <td>Rs<?php echo (number_format($productPrice)); ?></td>
                 <td>Rs<?php echo (number_format($stockWorth)); ?></td>
                 <td><?php echo $productVendorName; ?></td>
-                <td class="text-center"><a href="edit-products.php?product=<?php echo $productName; ?>">Edit</a></a></td>
+                <td class="text-center"><a href="edit-products.php?product=<?php echo $productID; ?>">Edit</a></a></td>
               </tr>
               <?php
             }
