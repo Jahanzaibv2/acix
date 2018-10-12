@@ -10,4 +10,5 @@
     <?php
       require (ABSPATH.'/admin/scripts/area-chart.php');
       require (ABSPATH.'/admin/scripts/bar-chart.php');
+      require (ABSPATH.'/admin/scripts/pie-chart.php');
     ?>
