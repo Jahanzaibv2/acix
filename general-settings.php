@@ -34,7 +34,7 @@ session_start();
           <?php require (ABSPATH.APPINC."/modules/breadcrumbs.php"); ?>
           <h1>General Settings</h1>
           <hr>
-          <p>This is a great starting point for new custom pages.</p>
+          <p>I don't think there's any settings you'd like to tweak.</p>
         </div>
         <br><br><br>
         <?php require (ABSPATH.APPINC.'/modules/footer.php'); ?>
