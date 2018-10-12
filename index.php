@@ -51,7 +51,7 @@ session_start();
               <?php require (ABSPATH.APPINC."/cards/improvements.php"); ?>
             </div>
           </div>
-          <?php require (ABSPATH.APPINC."/charts/demo-area-chart.php"); ?>
+          <?php require (ABSPATH.APPINC."/charts/area-chart.php"); ?>
         </div>
         <br><br><br>
         <?php require (ABSPATH.APPINC.'/modules/footer.php'); ?>

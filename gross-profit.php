@@ -34,21 +34,15 @@ session_start();
           <?php require (ABSPATH.APPINC."/modules/breadcrumbs.php"); ?>
           <div class="row">
             <div class="col-md-6 col-sm-12 col-xs-12 mb-3">
-              <?php require (ABSPATH.APPINC."/cards/gross-profit-last-7days.php"); ?>
+              <?php // require (ABSPATH.APPINC."/cards/gross-profit-last-month.php"); ?>
             </div>
             <div class="col-md-6 col-sm-12 col-xs-12 mb-3">
-              <?php require (ABSPATH.APPINC."/cards/gross-profit-last-30days.php"); ?>
-            </div>
-            <div class="col-md-6 col-sm-12 col-xs-12 mb-3">
-              <?php require (ABSPATH.APPINC."/cards/gross-profit-last-3months.php"); ?>
-            </div>
-            <div class="col-md-6 col-sm-12 col-xs-12 mb-3">
-              <?php require (ABSPATH.APPINC."/cards/gross-profit-last-6months.php"); ?>
+              <?php // require (ABSPATH.APPINC."/cards/gross-profit-this-month.php"); ?>
             </div>
           </div>
           <div class="row">
             <div class="col-12">
-              <?php require (ABSPATH.APPINC."/charts/demo-last-6months-profit-area-chart.php"); ?>
+              <?php require (ABSPATH.APPINC."/charts/area-chart.php"); ?>
             </div>
           </div>
         </div>

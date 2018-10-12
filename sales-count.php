@@ -42,7 +42,7 @@ session_start();
           </div>
           <div class="row">
             <div class="col-12">
-              <?php require (ABSPATH.APPINC."/charts/demo-last-6months-profit-area-chart.php"); ?>
+              <?php require (ABSPATH.APPINC."/charts/area-chart.php"); ?>
             </div>
           </div>
         </div>

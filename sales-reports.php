@@ -33,14 +33,14 @@ session_start();
           <div class="container-fluid">
             <?php
               require (ABSPATH.APPINC."/modules/breadcrumbs.php");
-              require (ABSPATH.APPINC."/charts/demo-area-chart.php");
+              require (ABSPATH.APPINC."/charts/area-chart.php");
             ?>
           <div class="row">
             <div class="col-lg-8">
-              <?php require (ABSPATH.APPINC."/charts/demo-bar-chart.php"); ?>
+              <?php require (ABSPATH.APPINC."/charts/bar-chart.php"); ?>
             </div>
             <div class="col-lg-4">
-              <?php require (ABSPATH.APPINC."/charts/demo-pie-chart.php"); ?>
+              <?php require (ABSPATH.APPINC."/charts/pie-chart.php"); ?>
             </div>
           </div>
           <p class="small text-center text-muted my-5">

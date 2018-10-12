@@ -34,7 +34,7 @@ session_start();
           <?php require (ABSPATH.APPINC."/modules/breadcrumbs.php"); ?>
           <div class="row">
             <div class="col-12">
-              <?php require (ABSPATH.APPINC."/charts/demo-revenue-bar-chart.php"); ?>
+              <?php require (ABSPATH.APPINC."/charts/bar-chart.php"); ?>
             </div>
           </div>
         </div>
