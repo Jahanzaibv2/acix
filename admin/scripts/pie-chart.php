@@ -1,7 +1,14 @@
 <?php
+session_start();
+
+  if (isset($_SESSION['user_id'])) {
 
   require (ABSPATH.'/admin/scripts/get-gross-profit-this-year.php');
 
+  } else {
+        // Redirecting to for further redirection
+        header('location: /');
+      }
 ?>
 <script type="text/javascript">
 // Set new default font family and font color to mimic Bootstrap's default styling
