@@ -32,15 +32,18 @@ session_start();
       <div id="content-wrapper">
         <div class="container-fluid">
           <?php require (ABSPATH.APPINC."/modules/breadcrumbs.php"); ?>
+          <h1>No products to show</h1>
+          <hr>
+          <p>None of your product sellings are matching top selling record</p>
           <div class="row">
             <div class="col-lg-4">
-              <?php require (ABSPATH.APPINC."/cards/top-selling-last-month.php"); ?>
+              <?php // require (ABSPATH.APPINC."/cards/top-selling-last-month.php"); ?>
             </div>
             <div class="col-lg-4">
-              <?php require (ABSPATH.APPINC."/cards/top-selling-last-3months.php"); ?>
+              <?php // require (ABSPATH.APPINC."/cards/top-selling-last-3months.php"); ?>
             </div>
             <div class="col-lg-4">
-              <?php require (ABSPATH.APPINC."/cards/top-selling-last-6months.php"); ?>
+              <?php // require (ABSPATH.APPINC."/cards/top-selling-last-6months.php"); ?>
             </div>
           </div>
         </div>
