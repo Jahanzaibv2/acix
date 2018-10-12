@@ -5,7 +5,7 @@
         <div class="copyright text-center my-auto ">
           <br><br><br>
           <small class="text-muted">
-            You're using  v1.0 of this software. <a href="#"> <i class="fa fa-external-link"></i> Check for Updates</a>. In order to report a bug, please create an issue <a href="https://github.com/appzaib/acix/issues">here.</a>
+            You're using  v1.0 of this software. <a href="https://github.com/appzaib/acix/releases" target="_blank"> <i class="fa fa-external-link"></i> Check for Updates</a>. In order to report a bug, please create an issue <a href="https://github.com/appzaib/acix/issues">here.</a>
             <br><br><br>
             <a href="#">Legal</a> | <a href="#">Privacy Policy</a> | <a href="#">Terms of Use</a> | <a href="#">Advertisements</a>
           </small>
