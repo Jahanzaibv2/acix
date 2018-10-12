@@ -1,13 +1,11 @@
 <?php
 
-session_start();
-
-  if (!isset($_SESSION['user_id'])) {
 
     require ('load.php');
-    require (ABSPATH.'/admin/scripts/getuserinfo.php');
 
     require (ABSPATH.'/admin/scripts/login.php');
+
+    $REQUIRE_CHARTS = 0;
 
     $PAGE_TITLE  = "Login";
     $PAGE_DESC   = "...";
@@ -59,6 +57,3 @@ session_start();
     ?>
   </body>
 </html>
-<?php } else {
-  header('location: /');
-} ?>

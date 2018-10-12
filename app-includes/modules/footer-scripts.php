@@ -8,7 +8,12 @@
     <script src="<?php echo APPINC; ?>/js/rc-pos.min.js"></script>
     <script src="<?php echo APPINC; ?>/js/datatables-demo.js"></script>
     <?php
+    if ($REQUIRE_CHARTS == 0) {
+      // code...
+    }else {
       require (ABSPATH.'/admin/scripts/area-chart.php');
       require (ABSPATH.'/admin/scripts/bar-chart.php');
       require (ABSPATH.'/admin/scripts/pie-chart.php');
+
+    }
     ?>
