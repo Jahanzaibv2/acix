@@ -7,7 +7,7 @@
 
     $REQUIRE_CHARTS = 0;
 
-    $PAGE_TITLE  = "Login";
+    $PAGE_TITLE  = "Login"; // NOTE: This variable is used in footer scripts to add exception for charts. If you make any changes here, you'd need to fix there too.
     $PAGE_DESC   = "...";
     $PAGE_AUTHOR = "...";
 
