@@ -8,7 +8,7 @@
     <script src="<?php echo APPINC; ?>/js/rc-pos.min.js"></script>
     <script src="<?php echo APPINC; ?>/js/datatables-demo.js"></script>
     <?php
-    if ($REQUIRE_CHARTS == 0) {
+    if ($PAGE_TITLE == "Login") {
       // code...
     }else {
       require (ABSPATH.'/admin/scripts/area-chart.php');
