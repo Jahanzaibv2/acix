@@ -1,4 +1,8 @@
 <?php
+
+if (!defined('ABSPATH'))
+    exit('No direct script access allowed');
+
   if (isset($_POST['addBrand'])) {
     $brandName = mysqli_real_escape_string($appconnect, $_POST['brand_name']);
     $brandDesc = mysqli_real_escape_string($appconnect, $_POST['brand_desc']);

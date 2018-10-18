@@ -1,5 +1,9 @@
 <?php
 
+if (!defined('ABSPATH'))
+    exit('No direct script access allowed');
+
+
   if (isset($_POST['addSale'])) {
 
     $productID = mysqli_real_escape_string($appconnect, $_POST['product_id']);

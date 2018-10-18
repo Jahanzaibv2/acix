@@ -1,4 +1,8 @@
 <?php
+
+if (!defined('ABSPATH'))
+    exit('No direct script access allowed');
+
   if (isset($_POST['addProductType'])) {
     $productType = mysqli_real_escape_string($appconnect, $_POST['product_type']);
     $productDesc = mysqli_real_escape_string($appconnect, $_POST['product_desc']);

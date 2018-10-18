@@ -1,4 +1,8 @@
 <?php
+
+if (!defined('ABSPATH'))
+    exit('No direct script access allowed');
+
   if (isset($_POST['addExpenseAccount'])) {
     $accountTitle = mysqli_real_escape_string($appconnect, $_POST['account_title']);
     $accountDesc = mysqli_real_escape_string($appconnect, $_POST['account_desc']);

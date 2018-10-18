@@ -1,5 +1,9 @@
 <?php
 
+if (!defined('ABSPATH'))
+    exit('No direct script access allowed');
+
+
     // Get Profit Details
     // for Januray
     $res = mysqli_query($appconnect, "SELECT * FROM `sales` WHERE `month`='$january' AND `year`='$thisYear'");

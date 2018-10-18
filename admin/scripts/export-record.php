@@ -1,4 +1,8 @@
 <?php
+
+if (!defined('ABSPATH'))
+    exit('No direct script access allowed');
+
     //ENTER THE RELEVANT INFO BELOW
     $mysqlUserName      = "root";
     $mysqlPassword      = "test";

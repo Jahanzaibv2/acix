@@ -1,4 +1,8 @@
 <?php
+
+if (!defined('ABSPATH'))
+    exit('No direct script access allowed');
+
   if (isset($_POST['addVendor'])) {
     $vendorName = mysqli_real_escape_string($appconnect, $_POST['vendor_name']);
     $vendorPhone = mysqli_real_escape_string($appconnect, $_POST['vendor_phone']);
