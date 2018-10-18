@@ -1,5 +1,9 @@
 <?php
 
+if (!defined('ABSPATH'))
+    exit('No direct script access allowed');
+
+
 if (isset($_POST['update-vendor'])) {
   $vendorID = mysqli_real_escape_string($appconnect, $_POST['vendorID']);
   $vendorName = mysqli_real_escape_string($appconnect, $_POST['vendorName']);

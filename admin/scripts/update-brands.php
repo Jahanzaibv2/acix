@@ -1,5 +1,9 @@
 <?php
 
+if (!defined('ABSPATH'))
+    exit('No direct script access allowed');
+
+
   if (isset($_POST['update-brand'])) {
     $brandID   = mysqli_real_escape_string($appconnect, $_POST['brandID']);
     $brandName = mysqli_real_escape_string($appconnect, $_POST['brandName']);

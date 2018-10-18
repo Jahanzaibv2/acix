@@ -1,5 +1,9 @@
 <?php
 
+if (!defined('ABSPATH'))
+    exit('No direct script access allowed');
+
+
   if (isset($_POST['update-profile'])) {
     $fullName   = mysqli_real_escape_string($appconnect, $_POST['fullname']);
     $username = mysqli_real_escape_string($appconnect, $_POST['username']);
