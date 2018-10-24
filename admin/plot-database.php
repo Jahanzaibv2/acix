@@ -1,8 +1,6 @@
 <?php
 
-    $users = mysqli_query($appconnect, "CREATE TABLE IF NOT EXISTS `acix`.`users` (
-                          `id` INT NOT NULL AUTO_INCREMENT ,
-                          `username` VARCHAR(255) NOT NULL ,
+    $users = mysqli_query($appconnect, "CREATE TABLE IF NOT EXISTS `acix`.`users` ( `id` INT NOT NULL AUTO_INCREMENT , `username` VARCHAR(255) NOT NULL ,
                           `password` VARCHAR(255) NOT NULL ,
                           `fullname` VARCHAR(255) NOT NULL ,
                           `email` VARCHAR(255) NULL ,
