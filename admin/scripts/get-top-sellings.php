@@ -20,7 +20,7 @@ session_start();
   $row = mysqli_fetch_array($res);
 
   $topSellingProduct = $row['name'];
-} else {
+  } else {
     // Redirecting to for further redirection
     header('location: /');
   }
