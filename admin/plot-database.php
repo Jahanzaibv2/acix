@@ -1,4 +1,19 @@
 <?php
+/**
+ * Appzaib (https://appzaib.com)
+ * @copyright Appzaib 2018-2019
+ * 
+ * 
+ * Plot Database Page
+ * 
+ * 
+ * 
+ * 
+ * 
+ * @author Rana Jahanzaib <Jahanzaibv2@gmail.com>
+ * 
+ * @package Acix
+ */
 
     $users = mysqli_query($appconnect, "CREATE TABLE IF NOT EXISTS `acix`.`users` ( `id` INT NOT NULL AUTO_INCREMENT , `username` VARCHAR(255) NOT NULL ,
                           `password` VARCHAR(255) NOT NULL ,
