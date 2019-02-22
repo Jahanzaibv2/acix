@@ -6,7 +6,7 @@ if (!defined('ABSPATH'))
 
 
 
-session_start();
+  session_start();
 
   if (isset($_SESSION['user_id'])) {
 
