@@ -24,7 +24,7 @@
 
 
 
-} else {
-      // Redirecting to for further redirection
-      header('location: /');
-    }
+  } else {
+    // Redirecting to for further redirection
+    header('location: /');
+  }
