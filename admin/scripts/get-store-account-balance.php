@@ -20,7 +20,7 @@
     exit('No direct script access allowed');
 
 
-session_start();
+  session_start();
 
   if (isset($_SESSION['user_id'])) {
 
