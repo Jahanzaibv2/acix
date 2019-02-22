@@ -15,5 +15,3 @@ if (!defined('ABSPATH'))
                  `description` = '$accountDesc',
                  `last_updated` = current_timestamp() WHERE `expense_accounts`.`id` = '$accountID' ");
   }
-
-?>
