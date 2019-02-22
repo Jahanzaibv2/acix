@@ -22,7 +22,6 @@
     require ('load.php');
     require (ABSPATH.'/admin/scripts/getuserinfo.php');
 
-
     $PAGE_TITLE  = "Brands";
     $PAGE_DESC   = "...";
     $PAGE_AUTHOR = "...";
