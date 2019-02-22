@@ -4,7 +4,7 @@
  * @copyright Appzaib 2018-2019
  * 
  * 
- * Add Brand
+ * Update Product Types
  * 
  * 
  * 
@@ -34,5 +34,3 @@
 
 
   }
-
-?>
