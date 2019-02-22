@@ -15,5 +15,3 @@
                  `description` = '$brandDesc',
                  `last_updated` = current_timestamp() WHERE `product_brands`.`id` = '$brandID' ");
   }
-
-?>
