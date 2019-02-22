@@ -4,7 +4,7 @@
  * @copyright Appzaib 2018-2019
  * 
  * 
- * Add Brand
+ * Add Brands
  * 
  * 
  * 
