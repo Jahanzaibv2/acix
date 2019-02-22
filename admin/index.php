@@ -4,7 +4,7 @@
  * @copyright Appzaib 2018-2019
  * 
  * 
- * Admin Home Page
+ * Admin Settings Page
  * 
  * 
  * 
