@@ -76,5 +76,3 @@
                               `last_updated` = current_timestamp()
                               WHERE `products`.`id` = '$productID' ");
   }
-
-?>
