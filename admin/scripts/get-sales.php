@@ -17,4 +17,4 @@ if (!defined('ABSPATH'))
 } else {
       // Redirecting to for further redirection
       header('location: /');
-    }
+  }
