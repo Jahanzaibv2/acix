@@ -13,4 +13,4 @@ session_start();
 } else {
       // Redirecting to for further redirection
       header('location: /');
-    }
+  }
