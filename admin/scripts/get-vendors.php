@@ -11,6 +11,6 @@ session_start();
   $res = mysqli_query($appconnect, "SELECT * FROM `vendors`");
 
 } else {
-      // Redirecting to for further redirection
-      header('location: /');
+    // Redirecting to for further redirection
+    header('location: /');
   }
