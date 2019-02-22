@@ -26,4 +26,3 @@
       // Redirecting to for further redirection
       header('location: /');
     }
-?>
