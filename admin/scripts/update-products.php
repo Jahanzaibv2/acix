@@ -30,8 +30,6 @@
     $productPrice = mysqli_real_escape_string($appconnect, $_POST['productPrice']);
     $stock = mysqli_real_escape_string($appconnect, $_POST['stock']);
 
-
-
       $res = mysqli_query($appconnect, "SELECT * FROM `products` WHERE `id`='$productID'");
       $row = mysqli_fetch_array($res);
 
