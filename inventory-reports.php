@@ -1,6 +1,21 @@
 <?php
+/**
+ * Appzaib (https://appzaib.com)
+ * @copyright Appzaib 2018-2019
+ * 
+ * 
+ * Inventory Reports
+ * 
+ * 
+ * 
+ * 
+ * 
+ * @author Rana Jahanzaib <Jahanzaibv2@gmail.com>
+ * 
+ * @package Acix
+ */
 
-session_start();
+  session_start();
 
   if (isset($_SESSION['user_id'])) {
 
