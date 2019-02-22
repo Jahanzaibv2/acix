@@ -22,7 +22,7 @@
     $grossProfit = $grossProfit / 1000;
   }
 
-} else {
-      // Redirecting to for further redirection
-      header('location: /');
-    }
+  } else {
+    // Redirecting to for further redirection
+    header('location: /');
+  }
