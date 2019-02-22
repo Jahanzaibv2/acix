@@ -8,7 +8,7 @@
 
   if (isset($_SESSION['user_id'])) {
 
-  require (ABSPATH.'/admin/scripts/get-gross-profit-this-year.php');
+    require (ABSPATH.'/admin/scripts/get-gross-profit-this-year.php');
 
   } else {
         // Redirecting to for further redirection
