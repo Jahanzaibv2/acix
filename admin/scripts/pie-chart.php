@@ -11,8 +11,8 @@
     require (ABSPATH.'/admin/scripts/get-gross-profit-this-year.php');
 
   } else {
-        // Redirecting to for further redirection
-        header('location: /');
+    // Redirecting to for further redirection
+    header('location: /');
   }
 ?>
 <script type="text/javascript">
