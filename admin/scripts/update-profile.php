@@ -18,5 +18,3 @@
                               `email` = '$email' WHERE `users`.`id` = '$ID' AND
                               `users`.`password`='$encryptedPassword'");
   }
-
-?>
