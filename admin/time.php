@@ -17,4 +17,3 @@
   $october = "October";
   $november = "November";
   $december = "December";
-?>
