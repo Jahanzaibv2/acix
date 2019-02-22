@@ -13,7 +13,7 @@
   } else {
         // Redirecting to for further redirection
         header('location: /');
-      }
+  }
 ?>
 <script type="text/javascript">
 // Set new default font family and font color to mimic Bootstrap's default styling
