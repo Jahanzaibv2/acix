@@ -21,6 +21,6 @@ session_start();
 
   $topSellingProduct = $row['name'];
 } else {
-      // Redirecting to for further redirection
-      header('location: /');
+    // Redirecting to for further redirection
+    header('location: /');
   }
