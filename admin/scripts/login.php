@@ -6,9 +6,6 @@
 
   session_start();
 
-
-
-
   if (isset($_POST['login'])) {
     $username = mysqli_real_escape_string($appconnect, $_POST['username']);
     $password = mysqli_real_escape_string($appconnect, $_POST['password']);
