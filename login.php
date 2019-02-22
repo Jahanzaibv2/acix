@@ -1,15 +1,29 @@
 <?php
+/**
+ * Appzaib (https://appzaib.com)
+ * @copyright Appzaib 2018-2019
+ * 
+ * 
+ * Login Page
+ * 
+ * 
+ * 
+ * 
+ * 
+ * @author Rana Jahanzaib <Jahanzaibv2@gmail.com>
+ * 
+ * @package Acix
+ */
 
+  require ('load.php');
 
-    require ('load.php');
+  require (ABSPATH.'/admin/scripts/login.php');
 
-    require (ABSPATH.'/admin/scripts/login.php');
+  $REQUIRE_CHARTS = 0;
 
-    $REQUIRE_CHARTS = 0;
-
-    $PAGE_TITLE  = "Login"; // NOTE: This variable is used in footer scripts to add exception for charts. If you make any changes here, you'd need to fix there too.
-    $PAGE_DESC   = "...";
-    $PAGE_AUTHOR = "...";
+  $PAGE_TITLE  = "Login"; // NOTE: This variable is used in footer scripts to add exception for charts. If you make any changes here, you'd need to fix there too.
+  $PAGE_DESC   = "...";
+  $PAGE_AUTHOR = "...";
 
 
 
