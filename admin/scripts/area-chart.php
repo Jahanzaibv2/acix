@@ -2,7 +2,7 @@
 
 // preventing direct script access
 if (!defined('ABSPATH'))
-    exit('No direct script access allowed');
+  exit('No direct script access allowed');
 
 session_start();
 
