@@ -10,7 +10,7 @@
  * 
  * 
  * 
- * @author Rana Jahanzaib <Jahanzaibv2@gmail.com>
+ * @author Rana Jahanzaib <iam@ranajahanzaib.com>
  * 
  * @package Acix
  */
