@@ -1,5 +1,26 @@
 <?php
+/**
+ * Appzaib (https://appzaib.com)
+ * @copyright Appzaib 2018-2019
+ * 
+ * 
+ * Sales Last Month
+ * 
+ * 
+ * 
+ * 
+ * 
+ * @author Rana Jahanzaib <iam@ranajahanzaib.com>
+ * 
+ * @package Acix
+ */
+
+  // preventing direct script access
+  if (!defined('ABSPATH'))
+    exit('No direct script access allowed');
+
   require (ABSPATH.'/admin/scripts/get-sales-last-month.php');
+
 ?>
 <div class="card text-white bg-primary o-hidden h-100">
   <div class="card-header">
