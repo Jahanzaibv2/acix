@@ -1,5 +1,28 @@
 <?php
-  include (ABSPATH.'/admin/scripts/get-brands.php');
+/**
+ * Appzaib (https://appzaib.com)
+ * @copyright Appzaib 2018-2019
+ * 
+ * 
+ *  Brands Table
+ * 
+ * 
+ * 
+ * 
+ * 
+ * @author Rana Jahanzaib <iam@ranajahanzaib.com>
+ * 
+ * @package Acix
+ */
+
+  // preventing direct script access
+  if (!defined('ABSPATH'))
+    exit('No direct script access allowed');
+
+
+include (ABSPATH.'/admin/scripts/get-brands.php');
+
+
 ?>
 <!-- Brands Table -->
 <div class="card mb-3">
