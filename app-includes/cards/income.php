@@ -1,4 +1,23 @@
 <?php
+/**
+ * Appzaib (https://appzaib.com)
+ * @copyright Appzaib 2018-2019
+ * 
+ * 
+ * Income
+ * 
+ * 
+ * 
+ * 
+ * 
+ * @author Rana Jahanzaib <iam@ranajahanzaib.com>
+ * 
+ * @package Acix
+ */
+
+  // preventing direct script access
+  if (!defined('ABSPATH'))
+    exit('No direct script access allowed');
 
   include (ABSPATH.'/admin/scripts/get-income.php');
 
