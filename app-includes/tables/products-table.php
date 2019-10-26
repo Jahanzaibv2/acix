@@ -1,5 +1,27 @@
 <?php
-  include (ABSPATH.'/admin/scripts/get-products.php');
+/**
+ * Appzaib (https://appzaib.com)
+ * @copyright Appzaib 2018-2019
+ * 
+ * 
+ * Products Table
+ * 
+ * 
+ * 
+ * 
+ * 
+ * @author Rana Jahanzaib <iam@ranajahanzaib.com>
+ * 
+ * @package Acix
+ */
+
+  // preventing direct script access
+  if (!defined('ABSPATH'))
+    exit('No direct script access allowed');
+
+
+include (ABSPATH.'/admin/scripts/get-products.php');
+
 ?>
 <!-- Products Table -->
 <div class="card mb-3">
