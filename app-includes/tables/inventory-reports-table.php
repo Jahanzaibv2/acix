@@ -1,5 +1,27 @@
 <?php
+/**
+ * Appzaib (https://appzaib.com)
+ * @copyright Appzaib 2018-2019
+ * 
+ * 
+ * Inventory Reports Table
+ * 
+ * 
+ * 
+ * 
+ * 
+ * @author Rana Jahanzaib <iam@ranajahanzaib.com>
+ * 
+ * @package Acix
+ */
+
+  // preventing direct script access
+  if (!defined('ABSPATH'))
+    exit('No direct script access allowed');
+
+  
   include (ABSPATH.'/admin/scripts/get-inventory-reports.php');
+
 ?>
 <!-- Inventory Reports Table -->
 <div class="card mb-3">
