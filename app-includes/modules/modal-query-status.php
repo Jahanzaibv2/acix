@@ -1,4 +1,25 @@
-<?php  ?>
+<?php
+/**
+ * Appzaib (https://appzaib.com)
+ * @copyright Appzaib 2018-2019
+ * 
+ * 
+ * Modal Query Status
+ * 
+ * 
+ * 
+ * 
+ * 
+ * @author Rana Jahanzaib <iam@ranajahanzaib.com>
+ * 
+ * @package Acix
+ */
+
+  // preventing direct script access
+  if (!defined('ABSPATH'))
+    exit('No direct script access allowed');
+
+?>
     <!-- Query Status-->
     <div class="modal fade" id="queryStatus" tabindex="-1" role="dialog" aria-labelledby="queryStatus" aria-hidden="true">
       <div class="modal-dialog modal-sm vertical-center" role="document">
