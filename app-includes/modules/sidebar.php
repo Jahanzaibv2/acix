@@ -1,4 +1,25 @@
-<?php  ?>
+<?php
+/**
+ * Appzaib (https://appzaib.com)
+ * @copyright Appzaib 2018-2019
+ * 
+ * 
+ * Sidebar
+ * 
+ * 
+ * 
+ * 
+ * 
+ * @author Rana Jahanzaib <iam@ranajahanzaib.com>
+ * 
+ * @package Acix
+ */
+
+  // preventing direct script access
+  if (!defined('ABSPATH'))
+    exit('No direct script access allowed');
+
+?>
         <!-- Sidebar -->
         <ul class="sidebar navbar-nav">
           <li class="nav-item <?php if ($PAGE_TITLE == "Home") {echo "active";} ?>">
