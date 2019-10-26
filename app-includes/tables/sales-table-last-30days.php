@@ -1,5 +1,29 @@
 <?php
-  include (ABSPATH.'/admin/scripts/get-sales.php');
+/**
+ * Appzaib (https://appzaib.com)
+ * @copyright Appzaib 2018-2019
+ * 
+ * 
+ * Sales Table Last 30 Days
+ * 
+ * 
+ * 
+ * 
+ * 
+ * @author Rana Jahanzaib <iam@ranajahanzaib.com>
+ * 
+ * @package Acix
+ */
+
+  // preventing direct script access
+  if (!defined('ABSPATH'))
+    exit('No direct script access allowed');
+
+
+
+include (ABSPATH.'/admin/scripts/get-sales.php');
+
+
 ?>
 <!-- Sales Records Table : Last 30 Days -->
 <div class="card mb-3">
