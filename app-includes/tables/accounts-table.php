@@ -1,5 +1,29 @@
 <?php
+/**
+ * Appzaib (https://appzaib.com)
+ * @copyright Appzaib 2018-2019
+ * 
+ * 
+ * Accounts Table
+ * 
+ * 
+ * 
+ * 
+ * 
+ * @author Rana Jahanzaib <iam@ranajahanzaib.com>
+ * 
+ * @package Acix
+ */
+
+  // preventing direct script access
+  if (!defined('ABSPATH'))
+    exit('No direct script access allowed');
+<?php
+
+
+
   include (ABSPATH.'/admin/scripts/get-accounts.php');
+
 ?>
           <!-- Accounts Data Table -->
           <div class="card mb-3">
