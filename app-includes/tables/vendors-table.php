@@ -1,5 +1,27 @@
 <?php
-  include (ABSPATH.'/admin/scripts/get-vendors.php');
+/**
+ * Appzaib (https://appzaib.com)
+ * @copyright Appzaib 2018-2019
+ * 
+ * 
+ * Vendors Table
+ * 
+ * 
+ * 
+ * 
+ * 
+ * @author Rana Jahanzaib <iam@ranajahanzaib.com>
+ * 
+ * @package Acix
+ */
+
+  // preventing direct script access
+  if (!defined('ABSPATH'))
+    exit('No direct script access allowed');
+
+
+include (ABSPATH.'/admin/scripts/get-vendors.php');
+
 ?>
 <!-- Vendors Table -->
 <div class="card mb-3">
