@@ -1,4 +1,25 @@
-<?php  ?>
+<?php
+/**
+ * Appzaib (https://appzaib.com)
+ * @copyright Appzaib 2018-2019
+ * 
+ * 
+ * Sales Count Last 7 Days
+ * 
+ * 
+ * 
+ * 
+ * 
+ * @author Rana Jahanzaib <iam@ranajahanzaib.com>
+ * 
+ * @package Acix
+ */
+
+  // preventing direct script access
+  if (!defined('ABSPATH'))
+    exit('No direct script access allowed');
+
+?>
 <div class="card text-white bg-primary o-hidden h-100">
   <div class="card-header">
     <h1>Last 7 Days</h1>
